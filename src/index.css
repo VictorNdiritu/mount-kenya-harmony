@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,22 +7,22 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 210 11% 15%;
+    --foreground: 220 15% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 11% 15%;
+    --card-foreground: 220 15% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 11% 15%;
+    --popover-foreground: 220 15% 10%;
 
     --primary: 186 58% 57%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 186 30% 95%;
-    --secondary-foreground: 210 11% 15%;
+    --secondary: 186 20% 97%;
+    --secondary-foreground: 220 15% 10%;
 
-    --muted: 210 20% 96%;
-    --muted-foreground: 210 10% 45%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 10% 45%;
 
     --accent: 186 58% 57%;
     --accent-foreground: 0 0% 100%;
@@ -30,11 +30,11 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 210 20% 90%;
-    --input: 210 20% 90%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
     --ring: 186 58% 57%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -45,42 +45,43 @@
     --sidebar-border: 210 20% 90%;
     --sidebar-ring: 186 58% 57%;
 
-    /* Custom hotel tokens */
-    --hero-overlay: 210 11% 15%;
+    /* Custom tokens */
+    --hero-overlay: 220 15% 10%;
     --aqua: 186 58% 57%;
-    --aqua-light: 186 58% 92%;
+    --aqua-light: 186 40% 95%;
     --aqua-dark: 186 58% 42%;
-    --charcoal: 210 11% 15%;
+    --charcoal: 220 15% 10%;
     --warm-gray: 30 10% 96%;
+    --glass: 0 0% 100%;
   }
 
   .dark {
-    --background: 210 11% 10%;
+    --background: 220 15% 6%;
     --foreground: 0 0% 95%;
-    --card: 210 11% 13%;
+    --card: 220 15% 9%;
     --card-foreground: 0 0% 95%;
-    --popover: 210 11% 13%;
+    --popover: 220 15% 9%;
     --popover-foreground: 0 0% 95%;
     --primary: 186 58% 57%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 210 11% 18%;
+    --secondary: 220 15% 12%;
     --secondary-foreground: 0 0% 95%;
-    --muted: 210 11% 18%;
-    --muted-foreground: 210 10% 60%;
+    --muted: 220 15% 14%;
+    --muted-foreground: 220 10% 60%;
     --accent: 186 58% 57%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    --border: 210 11% 20%;
-    --input: 210 11% 20%;
+    --border: 220 15% 16%;
+    --input: 220 15% 16%;
     --ring: 186 58% 57%;
-    --sidebar-background: 210 11% 10%;
+    --sidebar-background: 220 15% 6%;
     --sidebar-foreground: 0 0% 90%;
     --sidebar-primary: 186 58% 57%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 210 11% 18%;
+    --sidebar-accent: 220 15% 12%;
     --sidebar-accent-foreground: 0 0% 90%;
-    --sidebar-border: 210 11% 20%;
+    --sidebar-border: 220 15% 16%;
     --sidebar-ring: 186 58% 57%;
   }
 }
@@ -103,18 +104,50 @@
   .hero-gradient {
     background: linear-gradient(
       to bottom,
-      hsla(var(--hero-overlay), 0.5) 0%,
-      hsla(var(--hero-overlay), 0.3) 50%,
-      hsla(var(--hero-overlay), 0.6) 100%
+      hsla(var(--hero-overlay), 0.3) 0%,
+      hsla(var(--hero-overlay), 0.1) 40%,
+      hsla(var(--hero-overlay), 0.7) 100%
     );
   }
 
   .section-padding {
-    @apply px-6 py-16 md:px-12 md:py-24 lg:px-20;
+    @apply px-6 py-20 md:px-12 md:py-28 lg:px-20;
   }
 
   .text-gradient {
     @apply bg-clip-text text-transparent;
     background-image: linear-gradient(135deg, hsl(var(--aqua)), hsl(var(--aqua-dark)));
   }
+
+  .glass {
+    background: hsla(var(--glass), 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .glass-dark {
+    background: hsla(var(--hero-overlay), 0.5);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary) / 0.4);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.6);
 }
