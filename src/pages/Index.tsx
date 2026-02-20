@@ -44,7 +44,7 @@ const Index = () => {
               </motion.p>
               <h1 className="font-display text-5xl md:text-7xl font-bold text-primary-foreground leading-[1.1] mb-6">
                 Where comfort meets{" "}
-                <span className="text-gradient">nature</span>
+                <span className="text-primary-foreground">nature</span>
               </h1>
               <p className="text-primary-foreground/70 text-lg md:text-xl leading-relaxed mb-10 max-w-lg">
                 An independent boutique hotel at the foothills of Mount Kenya — your gateway to adventure and serenity.
