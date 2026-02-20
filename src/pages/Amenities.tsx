@@ -4,6 +4,12 @@ import { Users, Utensils, Flower2, Waves } from "lucide-react";
 import heroImg from "@/assets/conferences/IMG_9438.jpg";
 import poolImg from "@/assets/Amenities/Outside view, with swimming pool.jpeg";
 import conferenceImg from "@/assets/conferences/IMG_9442.jpg";
+import confImg1 from "@/assets/conferences/IMG_9439.jpg";
+import confImg2 from "@/assets/conferences/IMG_9443.jpg";
+import confImg3 from "@/assets/conferences/IMG_9444.jpg";
+import confImg4 from "@/assets/conferences/IMG_9446.jpg";
+import confImg5 from "@/assets/conferences/IMG_9447.jpg";
+import confImg6 from "@/assets/conferences/IMG_9449.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
