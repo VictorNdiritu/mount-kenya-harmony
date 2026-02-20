@@ -10,6 +10,7 @@ import Amenities from "./pages/Amenities";
 import Activities from "./pages/Activities";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+import Booking from "./pages/Booking";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
