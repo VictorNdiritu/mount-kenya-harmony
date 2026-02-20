@@ -83,7 +83,7 @@ const Navbar = () => {
 
           <div className="hidden lg:block">
             <Link
-              to="/contact"
+              to="/booking"
               className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-primary text-primary-foreground font-body text-sm font-medium tracking-wide hover:bg-aqua-dark transition-all hover:gap-3 hover:shadow-lg hover:shadow-primary/25"
             >
               Book Now <ArrowRight size={14} />
