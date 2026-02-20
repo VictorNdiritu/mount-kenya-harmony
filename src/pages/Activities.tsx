@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import PageHero from "@/components/PageHero";
-import hikingImg from "@/assets/new-photos/IMG-20250408-WA0005.jpg";
-import wildlifeImg from "@/assets/new-photos/IMG-20250408-WA0010.jpg";
-import adventureImg from "@/assets/new-photos/IMG-20250408-WA0015.jpg";
+import hikingImg from "@/assets/gen-hiking.jpg";
+import wildlifeImg from "@/assets/gen-wildlife.jpg";
+import adventureImg from "@/assets/gen-adventure.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },

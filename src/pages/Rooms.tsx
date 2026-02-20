@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Users, Wifi, Coffee, Eye } from "lucide-react";
+import { ArrowRight, Users } from "lucide-react";
 import PageHero from "@/components/PageHero";
-import heroImage from "@/assets/new-photos/IMG-20250408-WA0001.jpg";
-import dlxImage from "@/assets/new-photos/DLXX.jpeg";
-import supImage from "@/assets/new-photos/SUPERIOR.jpg";
-import bathImage from "@/assets/new-photos/BATHROOM.jpeg";
-import twinImage from "@/assets/new-photos/IMG-20250408-WA0003.jpg";
+import heroImage from "@/assets/rooms/IMG-20250408-WA0050.jpg";
+import dlxImage from "@/assets/rooms/IMG-20250408-WA0020.jpg";
+import supImage from "@/assets/rooms/sup-deluxe.jpg";
+import familyImage from "@/assets/rooms/IMG-20250408-WA0022.jpg";
+import twinImage from "@/assets/rooms/IMG-20250408-WA0024.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -35,7 +35,7 @@ const rooms = [
   },
   {
     name: "Family Room",
-    image: bathImage,
+    image: familyImage,
     description: "Generous space for the whole family with interconnected areas and kid-friendly amenities.",
     amenities: ["Free Wi-Fi", "Extra Beds", "Family Friendly"],
     residents: { sgl: "From 15,500 KES" },
