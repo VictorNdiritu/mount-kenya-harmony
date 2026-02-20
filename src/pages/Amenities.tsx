@@ -1,9 +1,15 @@
 import { motion } from "framer-motion";
 import PageHero from "@/components/PageHero";
 import { Users, Utensils, Flower2, Waves } from "lucide-react";
-import heroImg from "@/assets/Amenities/Lobby.jpg";
+import heroImg from "@/assets/conferences/IMG_9438.jpg";
 import poolImg from "@/assets/Amenities/Outside view, with swimming pool.jpeg";
 import conferenceImg from "@/assets/conferences/IMG_9442.jpg";
+import confImg1 from "@/assets/conferences/IMG_9439.jpg";
+import confImg2 from "@/assets/conferences/IMG_9443.jpg";
+import confImg3 from "@/assets/conferences/IMG_9444.jpg";
+import confImg4 from "@/assets/conferences/IMG_9446.jpg";
+import confImg5 from "@/assets/conferences/IMG_9447.jpg";
+import confImg6 from "@/assets/conferences/IMG_9449.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -119,6 +125,30 @@ const Amenities = () => (
         >
           <img src={poolImg} alt="Swimming pool" className="w-full rounded-2xl shadow-2xl aspect-[21/9] object-cover" />
         </motion.div>
+      </div>
+    </section>
+
+    {/* Conference Gallery */}
+    <section className="section-padding">
+      <div className="container mx-auto max-w-6xl">
+        <motion.div className="text-center mb-12" initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <motion.p variants={fadeUp} custom={0} className="text-primary font-body text-sm font-semibold tracking-[0.2em] uppercase mb-3">Gallery</motion.p>
+          <motion.h2 variants={fadeUp} custom={1} className="font-display text-4xl font-bold text-foreground">Conference & Event Spaces</motion.h2>
+        </motion.div>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+          {[confImg1, confImg2, confImg3, confImg4, confImg5, confImg6].map((img, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.08, duration: 0.5 }}
+              className="rounded-xl overflow-hidden aspect-[4/3] group"
+            >
+              <img src={img} alt={`Conference space ${i + 1}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   </>

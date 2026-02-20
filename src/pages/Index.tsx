@@ -4,7 +4,7 @@ import { Bed, Mountain, MessageCircle, ArrowRight, Star, ChevronRight } from "lu
 
 import heroImage from "@/assets/hero-image-1.jpg";
 import poolImage from "@/assets/Amenities/Outside view, with swimming pool.jpeg";
-import roomImage from "@/assets/rooms/IMG-20250408-WA0020.jpg";
+import roomImage from "@/assets/homepage-photos/sup-deluxe.jpg";
 import gardenImage from "@/assets/Amenities/IMG_9385.jpg";
 import diningImage from "@/assets/Amenities/Restaurant.jpg";
 import activityImage from "@/assets/gen-hiking.jpg";
@@ -44,7 +44,7 @@ const Index = () => {
               </motion.p>
               <h1 className="font-display text-5xl md:text-7xl font-bold text-primary-foreground leading-[1.1] mb-6">
                 Where comfort meets{" "}
-                <span className="text-gradient">nature</span>
+                <span className="text-primary-foreground">nature</span>
               </h1>
               <p className="text-primary-foreground/70 text-lg md:text-xl leading-relaxed mb-10 max-w-lg">
                 An independent boutique hotel at the foothills of Mount Kenya — your gateway to adventure and serenity.

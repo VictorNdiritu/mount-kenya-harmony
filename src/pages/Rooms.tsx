@@ -5,8 +5,8 @@ import PageHero from "@/components/PageHero";
 import heroImage from "@/assets/rooms/IMG-20250408-WA0050.jpg";
 import dlxImage from "@/assets/rooms/IMG-20250408-WA0020.jpg";
 import supImage from "@/assets/rooms/sup-deluxe.jpg";
-import familyImage from "@/assets/rooms/IMG-20250408-WA0022.jpg";
-import twinImage from "@/assets/rooms/IMG-20250408-WA0024.jpg";
+import familyImage from "@/assets/rooms/Family_Room.jpg";
+import twinImage from "@/assets/rooms/Twins.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },

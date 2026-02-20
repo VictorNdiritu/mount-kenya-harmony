@@ -50,14 +50,10 @@ const Navbar = () => {
               transition={{ type: "spring", stiffness: 300 }}
             />
             <div className="hidden sm:block">
-              <span className={`font-display font-semibold text-base tracking-wide transition-colors duration-300 ${
-                scrolled ? "text-foreground" : "text-primary-foreground"
-              }`}>
+              <span className="font-display font-semibold text-base tracking-wide text-primary-foreground">
                 THE WARWICK
               </span>
-              <span className={`block text-[10px] font-body tracking-[0.25em] uppercase transition-colors duration-300 ${
-                scrolled ? "text-muted-foreground" : "text-primary-foreground/70"
-              }`}>
+              <span className="block text-[10px] font-body tracking-[0.25em] uppercase text-primary-foreground/70">
                 Hotel Nanyuki
               </span>
             </div>
@@ -87,7 +83,7 @@ const Navbar = () => {
 
           <div className="hidden lg:block">
             <Link
-              to="/contact"
+              to="/booking"
               className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-primary text-primary-foreground font-body text-sm font-medium tracking-wide hover:bg-aqua-dark transition-all hover:gap-3 hover:shadow-lg hover:shadow-primary/25"
             >
               Book Now <ArrowRight size={14} />
@@ -157,7 +153,7 @@ const Navbar = () => {
                   className="mt-10"
                 >
                   <Link
-                    to="/contact"
+                    to="/booking"
                     onClick={() => setOpen(false)}
                     className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground font-body text-base font-medium tracking-wide"
                   >

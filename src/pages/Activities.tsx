@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import PageHero from "@/components/PageHero";
 import hikingImg from "@/assets/gen-hiking.jpg";
 import wildlifeImg from "@/assets/gen-wildlife.jpg";
-import adventureImg from "@/assets/gen-adventure.jpg";
+import adventureImg from "@/assets/ngare-ndare.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },

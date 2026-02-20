@@ -17,7 +17,7 @@ const PageHero = ({ image, title, subtitle }: PageHeroProps) => (
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0, 0, 0.2, 1] }}
         >
-          <h1 className="font-display text-4xl md:text-6xl font-bold text-primary-foreground mb-3">{title}</h1>
+          <h1 className="font-display text-4xl md:text-6xl font-bold text-primary mb-3">{title}</h1>
           {subtitle && (
             <p className="text-primary-foreground/70 text-lg md:text-xl max-w-2xl font-light">{subtitle}</p>
           )}
