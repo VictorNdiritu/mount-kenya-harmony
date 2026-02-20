@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Image } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import heroImg from "@/assets/hero-image-1.jpg";
 
