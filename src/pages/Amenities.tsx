@@ -127,6 +127,30 @@ const Amenities = () => (
         </motion.div>
       </div>
     </section>
+
+    {/* Conference Gallery */}
+    <section className="section-padding">
+      <div className="container mx-auto max-w-6xl">
+        <motion.div className="text-center mb-12" initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <motion.p variants={fadeUp} custom={0} className="text-primary font-body text-sm font-semibold tracking-[0.2em] uppercase mb-3">Gallery</motion.p>
+          <motion.h2 variants={fadeUp} custom={1} className="font-display text-4xl font-bold text-foreground">Conference & Event Spaces</motion.h2>
+        </motion.div>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+          {[confImg1, confImg2, confImg3, confImg4, confImg5, confImg6].map((img, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.08, duration: 0.5 }}
+              className="rounded-xl overflow-hidden aspect-[4/3] group"
+            >
+              <img src={img} alt={`Conference space ${i + 1}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
   </>
 );
 
