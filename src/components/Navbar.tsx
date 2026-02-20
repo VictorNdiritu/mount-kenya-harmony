@@ -53,9 +53,7 @@ const Navbar = () => {
               <span className="font-display font-semibold text-base tracking-wide text-primary-foreground">
                 THE WARWICK
               </span>
-              <span className={`block text-[10px] font-body tracking-[0.25em] uppercase transition-colors duration-300 ${
-                scrolled ? "text-muted-foreground" : "text-primary-foreground/70"
-              }`}>
+              <span className="block text-[10px] font-body tracking-[0.25em] uppercase text-primary-foreground/70">
                 Hotel Nanyuki
               </span>
             </div>
