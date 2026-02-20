@@ -50,9 +50,7 @@ const Navbar = () => {
               transition={{ type: "spring", stiffness: 300 }}
             />
             <div className="hidden sm:block">
-              <span className={`font-display font-semibold text-base tracking-wide transition-colors duration-300 ${
-                scrolled ? "text-foreground" : "text-primary-foreground"
-              }`}>
+              <span className="font-display font-semibold text-base tracking-wide text-primary-foreground">
                 THE WARWICK
               </span>
               <span className={`block text-[10px] font-body tracking-[0.25em] uppercase transition-colors duration-300 ${
