@@ -153,7 +153,7 @@ const Navbar = () => {
                   className="mt-10"
                 >
                   <Link
-                    to="/contact"
+                    to="/booking"
                     onClick={() => setOpen(false)}
                     className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground font-body text-base font-medium tracking-wide"
                   >

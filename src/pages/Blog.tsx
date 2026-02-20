@@ -28,6 +28,9 @@ const Blog = () => (
               transition={{ delay: i * 0.08, duration: 0.5 }}
               className="bg-background rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-shadow cursor-pointer group"
             >
+              <div className="aspect-[16/9] bg-secondary flex items-center justify-center">
+                <Image size={40} className="text-muted-foreground/30" />
+              </div>
               <div className="p-6">
                 <p className="text-xs text-primary font-body font-semibold uppercase tracking-wide mb-3">{post.date}</p>
                 <h3 className="font-display font-bold text-lg text-foreground mb-2 group-hover:text-primary transition-colors">{post.title}</h3>

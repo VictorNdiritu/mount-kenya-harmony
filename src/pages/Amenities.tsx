@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import PageHero from "@/components/PageHero";
 import { Users, Utensils, Flower2, Waves } from "lucide-react";
-import heroImg from "@/assets/Amenities/Lobby.jpg";
+import heroImg from "@/assets/conferences/IMG_9438.jpg";
 import poolImg from "@/assets/Amenities/Outside view, with swimming pool.jpeg";
 import conferenceImg from "@/assets/conferences/IMG_9442.jpg";
 

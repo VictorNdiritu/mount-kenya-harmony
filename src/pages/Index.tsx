@@ -4,7 +4,7 @@ import { Bed, Mountain, MessageCircle, ArrowRight, Star, ChevronRight } from "lu
 
 import heroImage from "@/assets/hero-image-1.jpg";
 import poolImage from "@/assets/Amenities/Outside view, with swimming pool.jpeg";
-import roomImage from "@/assets/rooms/IMG-20250408-WA0020.jpg";
+import roomImage from "@/assets/homepage-photos/sup-deluxe.jpg";
 import gardenImage from "@/assets/Amenities/IMG_9385.jpg";
 import diningImage from "@/assets/Amenities/Restaurant.jpg";
 import activityImage from "@/assets/gen-hiking.jpg";
