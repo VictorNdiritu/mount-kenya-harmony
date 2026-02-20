@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import PageHero from "@/components/PageHero";
 import { Mail, Phone, MapPin, Send, ArrowRight } from "lucide-react";
-import heroImg from "@/assets/new-photos/IMG-20250408-WA0020.jpg";
+import heroImg from "@/assets/hero-image-1.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },

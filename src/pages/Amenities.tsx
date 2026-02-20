@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import PageHero from "@/components/PageHero";
 import { Users, Utensils, Flower2, Waves } from "lucide-react";
-import conferenceImg from "@/assets/new-photos/IMG-20250408-WA0020.jpg";
-import poolImg from "@/assets/new-photos/IMG-20250408-WA0042.jpg";
-import gardenImg from "@/assets/new-photos/IMG-20250408-WA0045.jpg";
+import heroImg from "@/assets/Amenities/Lobby.jpg";
+import poolImg from "@/assets/Amenities/Outside view, with swimming pool.jpeg";
+import conferenceImg from "@/assets/conferences/IMG_9442.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -15,7 +15,7 @@ const fadeUp = {
 
 const Amenities = () => (
   <>
-    <PageHero image={conferenceImg} title="Amenities & Conferences" subtitle="Business meets tranquility" />
+    <PageHero image={heroImg} title="Amenities & Conferences" subtitle="Business meets tranquility" />
 
     {/* Conference Rates */}
     <section className="section-padding">
@@ -57,6 +57,20 @@ const Amenities = () => (
             </motion.div>
           </motion.div>
         </div>
+      </div>
+    </section>
+
+    {/* Conference Image */}
+    <section className="px-6 md:px-12 lg:px-20 pb-16">
+      <div className="container mx-auto max-w-6xl">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <img src={conferenceImg} alt="Conference facilities" className="w-full rounded-2xl shadow-2xl aspect-[21/9] object-cover" />
+        </motion.div>
       </div>
     </section>
 

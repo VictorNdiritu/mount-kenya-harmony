@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Bed, Mountain, MessageCircle, ArrowRight, Star, ChevronRight } from "lucide-react";
 
-import heroImage from "@/assets/new-photos/IMG-20250408-WA0060.jpg";
-import poolImage from "@/assets/new-photos/IMG-20250408-WA0042.jpg";
-import roomImage from "@/assets/new-photos/DLXX.jpeg";
-import gardenImage from "@/assets/new-photos/IMG-20250408-WA0045.jpg";
-import diningImage from "@/assets/new-photos/IMG-20250408-WA0050.jpg";
-import activityImage from "@/assets/new-photos/IMG-20250408-WA0005.jpg";
+import heroImage from "@/assets/hero-image-1.jpg";
+import poolImage from "@/assets/Amenities/Outside view, with swimming pool.jpeg";
+import roomImage from "@/assets/rooms/IMG-20250408-WA0020.jpg";
+import gardenImage from "@/assets/Amenities/IMG_9385.jpg";
+import diningImage from "@/assets/Amenities/Restaurant.jpg";
+import activityImage from "@/assets/gen-hiking.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
