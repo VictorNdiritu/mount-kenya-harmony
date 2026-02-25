@@ -19,11 +19,13 @@ const inputClass =
 const Booking = () => {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     setSuccess(false);
+    setError(false);
 
     const formData = new FormData(e.currentTarget);
 
@@ -36,14 +38,18 @@ const Booking = () => {
         },
       });
 
+      const data = await response.json();
+
       if (response.ok) {
         setSuccess(true);
         e.currentTarget.reset();
       } else {
-        alert("Something went wrong. Please try again.");
+        console.error(data);
+        setError(true);
       }
-    } catch (error) {
-      alert("Network error. Please try again.");
+    } catch (err) {
+      console.error("Submission error:", err);
+      setError(true);
     }
 
     setLoading(false);
@@ -59,20 +65,77 @@ const Booking = () => {
 
       <section className="section-padding">
         <div className="container mx-auto max-w-3xl">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <motion.p
+              variants={fadeUp}
+              custom={0}
+              className="text-primary font-body text-sm font-semibold tracking-[0.2em] uppercase mb-3 text-center"
+            >
+              Reservation
+            </motion.p>
+
+            <motion.h2
+              variants={fadeUp}
+              custom={1}
+              className="font-display text-4xl font-bold text-foreground mb-4 text-center"
+            >
+              Make a Reservation
+            </motion.h2>
+
+            <motion.p
+              variants={fadeUp}
+              custom={2}
+              className="text-muted-foreground text-center mb-10 max-w-lg mx-auto"
+            >
+              Fill in your details below and we will confirm your booking via email.
+            </motion.p>
+          </motion.div>
+
           <motion.form
             onSubmit={handleSubmit}
             className="bg-secondary rounded-2xl p-8 md:p-10 space-y-5"
           >
             <div className="grid sm:grid-cols-2 gap-4">
-              <input type="text" name="Full Name" placeholder="Full Name" required className={inputClass} />
-              <input type="email" name="Email" placeholder="Email Address" required className={inputClass} />
+              <input
+                type="text"
+                name="Full Name"
+                placeholder="Full Name"
+                required
+                className={inputClass}
+              />
+              <input
+                type="email"
+                name="Email"
+                placeholder="Email Address"
+                required
+                className={inputClass}
+              />
             </div>
 
-            <input type="tel" name="Phone" placeholder="Phone Number" className={inputClass} />
+            <input
+              type="tel"
+              name="Phone"
+              placeholder="Phone Number"
+              className={inputClass}
+            />
 
             <div className="grid sm:grid-cols-2 gap-4">
-              <input type="date" name="Check-in Date" required className={inputClass} />
-              <input type="date" name="Check-out Date" required className={inputClass} />
+              <input
+                type="date"
+                name="Check-in Date"
+                required
+                className={inputClass}
+              />
+              <input
+                type="date"
+                name="Check-out Date"
+                required
+                className={inputClass}
+              />
             </div>
 
             <div className="grid sm:grid-cols-2 gap-4">
@@ -93,11 +156,22 @@ const Booking = () => {
               </select>
             </div>
 
-            <textarea name="Special Requests" placeholder="Special requests or notes..." rows={4} className={`resize-none ${inputClass}`} />
+            <textarea
+              name="Special Requests"
+              placeholder="Special requests or notes..."
+              rows={4}
+              className={`resize-none ${inputClass}`}
+            />
 
             {success && (
               <p className="text-green-600 text-sm text-center">
                 Booking request sent successfully. We will contact you shortly.
+              </p>
+            )}
+
+            {error && (
+              <p className="text-red-600 text-sm text-center">
+                Something went wrong. Please try again.
               </p>
             )}
 
