@@ -19,14 +19,11 @@ const inputClass =
 const Booking = () => {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
-  const [error, setError] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     setLoading(true);
     setSuccess(false);
-    setError(false);
 
     const formData = new FormData(e.currentTarget);
 
@@ -44,13 +41,9 @@ const Booking = () => {
       if (response.ok && !data.errors) {
         setSuccess(true);
         e.currentTarget.reset();
-      } else {
-        console.error("Formspree error:", data);
-        setError(true);
       }
     } catch (err) {
-      console.error("Network error:", err);
-      setError(true);
+      console.error("Submission issue:", err);
     }
 
     setLoading(false);
@@ -137,12 +130,6 @@ const Booking = () => {
             {success && (
               <p className="text-green-600 text-sm text-center">
                 Booking request sent successfully. We will contact you shortly.
-              </p>
-            )}
-
-            {error && (
-              <p className="text-red-600 text-sm text-center">
-                Something went wrong. Please try again.
               </p>
             )}
 
