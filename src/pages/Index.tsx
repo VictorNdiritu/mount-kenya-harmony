@@ -19,17 +19,23 @@
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-dark text-primary text-xs font-medium tracking-[0.2em] uppercase mb-6"
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-dark text-xs font-medium tracking-[0.2em] uppercase mb-6"
+          style={{ color: "#53abb5" }}
         >
-          <Star size={12} className="text-primary" /> Nanyuki, Kenya
+          <Star size={12} style={{ color: "#53abb5" }} /> Nanyuki, Kenya
         </motion.p>
 
-        <h1 className="font-display text-5xl md:text-7xl font-semibold text-primary leading-[1.1] mb-6">
-          Where comfort meets{" "}
-          <span className="text-primary">nature</span>
+        <h1
+          className="font-display text-5xl md:text-7xl font-semibold leading-[1.1] mb-6"
+          style={{ color: "#53abb5" }}
+        >
+          Where comfort meets <span style={{ color: "#53abb5" }}>nature</span>
         </h1>
 
-        <p className="text-primary font-semibold text-lg md:text-xl leading-relaxed mb-10 max-w-lg">
+        <p
+          className="font-semibold text-lg md:text-xl leading-relaxed mb-10 max-w-lg"
+          style={{ color: "#53abb5" }}
+        >
           An independent boutique hotel at the foothills of Mount Kenya — your gateway to adventure and serenity.
         </p>
 
