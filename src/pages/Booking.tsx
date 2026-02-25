@@ -23,6 +23,7 @@ const Booking = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     setLoading(true);
     setSuccess(false);
     setError(false);
@@ -40,15 +41,15 @@ const Booking = () => {
 
       const data = await response.json();
 
-      if (response.ok) {
+      if (response.ok && !data.errors) {
         setSuccess(true);
         e.currentTarget.reset();
       } else {
-        console.error(data);
+        console.error("Formspree error:", data);
         setError(true);
       }
     } catch (err) {
-      console.error("Submission error:", err);
+      console.error("Network error:", err);
       setError(true);
     }
 
@@ -65,36 +66,6 @@ const Booking = () => {
 
       <section className="section-padding">
         <div className="container mx-auto max-w-3xl">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            <motion.p
-              variants={fadeUp}
-              custom={0}
-              className="text-primary font-body text-sm font-semibold tracking-[0.2em] uppercase mb-3 text-center"
-            >
-              Reservation
-            </motion.p>
-
-            <motion.h2
-              variants={fadeUp}
-              custom={1}
-              className="font-display text-4xl font-bold text-foreground mb-4 text-center"
-            >
-              Make a Reservation
-            </motion.h2>
-
-            <motion.p
-              variants={fadeUp}
-              custom={2}
-              className="text-muted-foreground text-center mb-10 max-w-lg mx-auto"
-            >
-              Fill in your details below and we will confirm your booking via email.
-            </motion.p>
-          </motion.div>
-
           <motion.form
             onSubmit={handleSubmit}
             className="bg-secondary rounded-2xl p-8 md:p-10 space-y-5"
