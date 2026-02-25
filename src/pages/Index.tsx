@@ -62,7 +62,7 @@ const Index = () => {
 
               <p
                 className="text-lg md:text-xl leading-relaxed mb-10 max-w-lg"
-                style={{ color: "#53abb5", WebkitTextFillColor: "#53abb5" }}
+                style={{ color: "#000000", WebkitTextFillColor: "#000000" }}
               >
                 An independent boutique hotel at the foothills of Mount Kenya — your gateway to adventure and serenity.
               </p>
