@@ -22,32 +22,44 @@ const rooms = [
     image: dlxImage,
     description: "A spacious room with elegant furnishings, modern amenities, and garden or mountain views.",
     amenities: ["Free Wi-Fi", "Room Service", "Mountain View"],
-    residents: { sgl: "9,500 KES", dbl: "10,500 KES" },
-    nonResidents: { sgl: "$90", dbl: "$110" },
+    tiers: [
+      { label: "Bed & Breakfast", resSgl: "10,500", resDbl: "11,500", nrSgl: "$100", nrDbl: "$120" },
+      { label: "Half Board", resSgl: "12,500", resDbl: "14,500", nrSgl: "$120", nrDbl: "$140" },
+      { label: "Full Board", resSgl: "13,500", resDbl: "16,000", nrSgl: "$140", nrDbl: "$160" },
+    ],
   },
   {
     name: "Superior Deluxe",
     image: supImage,
     description: "Upgraded luxury with premium bedding, a sitting area, and panoramic views of Mount Kenya.",
     amenities: ["Free Wi-Fi", "Mini Bar", "Panoramic View"],
-    residents: { sgl: "10,500 KES", dbl: "12,500 KES" },
-    nonResidents: { sgl: "$110", dbl: "$130" },
+    tiers: [
+      { label: "Bed & Breakfast", resSgl: "11,500", resDbl: "13,500", nrSgl: "$120", nrDbl: "$140" },
+      { label: "Half Board", resSgl: "13,000", resDbl: "16,500", nrSgl: "$140", nrDbl: "$160" },
+      { label: "Full Board", resSgl: "14,500", resDbl: "17,500", nrSgl: "$160", nrDbl: "$180" },
+    ],
   },
   {
     name: "Family Room",
     image: familyImage,
     description: "Generous space for the whole family with interconnected areas and kid-friendly amenities.",
     amenities: ["Free Wi-Fi", "Extra Beds", "Family Friendly"],
-    residents: { sgl: "From 15,500 KES" },
-    nonResidents: { sgl: "From $170" },
+    tiers: [
+      { label: "Bed & Breakfast", resSgl: "16,500", nrDbl: "$180" },
+      { label: "Half Board", resSgl: "22,500", nrDbl: "$210" },
+      { label: "Full Board", resSgl: "28,500", nrDbl: "$270" },
+    ],
   },
   {
     name: "Deluxe Twin",
     image: twinImage,
     description: "Two comfortable beds in a well-appointed room, ideal for friends or colleagues traveling together.",
     amenities: ["Free Wi-Fi", "Twin Beds", "Work Desk"],
-    residents: { sgl: "From 11,500 KES" },
-    nonResidents: { sgl: "From $120" },
+    tiers: [
+      { label: "Bed & Breakfast", resDbl: "12,500", nrDbl: "$130" },
+      { label: "Half Board", resDbl: "15,000", nrDbl: "$150" },
+      { label: "Full Board", resDbl: "17,000", nrDbl: "$170" },
+    ],
   },
 ];
 
