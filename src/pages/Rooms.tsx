@@ -95,20 +95,37 @@ const Rooms = () => (
                   ))}
                 </div>
 
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="rounded-xl bg-secondary p-5">
-                    <p className="text-xs text-muted-foreground font-medium tracking-wide uppercase mb-2">Residents</p>
-                    <p className="text-lg font-bold text-foreground font-display">{room.residents.sgl}</p>
-                    {room.residents.dbl && (
-                      <p className="text-xs text-muted-foreground mt-1">DBL: {room.residents.dbl}</p>
-                    )}
-                  </div>
-                  <div className="rounded-xl bg-secondary p-5">
-                    <p className="text-xs text-muted-foreground font-medium tracking-wide uppercase mb-2">Non-Residents</p>
-                    <p className="text-lg font-bold text-foreground font-display">{room.nonResidents.sgl}</p>
-                    {room.nonResidents.dbl && (
-                      <p className="text-xs text-muted-foreground mt-1">DBL: {room.nonResidents.dbl}</p>
-                    )}
+                <div className="space-y-3 mb-6">
+                  <p className="text-xs text-muted-foreground font-medium tracking-wide uppercase mb-2">Rates (KES / USD)</p>
+                  <div className="rounded-xl bg-secondary overflow-hidden">
+                    <table className="w-full text-sm">
+                      <thead>
+                        <tr className="border-b border-border/50">
+                          <th className="text-left p-3 text-xs text-muted-foreground font-medium">Plan</th>
+                          <th className="text-center p-3 text-xs text-muted-foreground font-medium">Resident</th>
+                          <th className="text-center p-3 text-xs text-muted-foreground font-medium">Non-Resident</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {room.tiers.map((tier) => (
+                          <tr key={tier.label} className="border-b border-border/30 last:border-0">
+                            <td className="p-3 text-xs font-medium text-foreground">{tier.label}</td>
+                            <td className="p-3 text-center text-xs text-foreground">
+                              {tier.resSgl && tier.resDbl
+                                ? `${tier.resSgl} / ${tier.resDbl}`
+                                : tier.resSgl
+                                  ? tier.resSgl
+                                  : tier.resDbl}
+                            </td>
+                            <td className="p-3 text-center text-xs text-foreground">
+                              {tier.nrSgl && tier.nrDbl
+                                ? `${tier.nrSgl} / ${tier.nrDbl}`
+                                : tier.nrDbl}
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
                   </div>
                 </div>
 
