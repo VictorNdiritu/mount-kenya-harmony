@@ -22,32 +22,44 @@ const rooms = [
     image: dlxImage,
     description: "A spacious room with elegant furnishings, modern amenities, and garden or mountain views.",
     amenities: ["Free Wi-Fi", "Room Service", "Mountain View"],
-    residents: { sgl: "9,500 KES", dbl: "10,500 KES" },
-    nonResidents: { sgl: "$90", dbl: "$110" },
+    tiers: [
+      { label: "Bed & Breakfast", resSgl: "10,500", resDbl: "11,500", nrSgl: "$100", nrDbl: "$120" },
+      { label: "Half Board", resSgl: "12,500", resDbl: "14,500", nrSgl: "$120", nrDbl: "$140" },
+      { label: "Full Board", resSgl: "13,500", resDbl: "16,000", nrSgl: "$140", nrDbl: "$160" },
+    ],
   },
   {
     name: "Superior Deluxe",
     image: supImage,
     description: "Upgraded luxury with premium bedding, a sitting area, and panoramic views of Mount Kenya.",
     amenities: ["Free Wi-Fi", "Mini Bar", "Panoramic View"],
-    residents: { sgl: "10,500 KES", dbl: "12,500 KES" },
-    nonResidents: { sgl: "$110", dbl: "$130" },
+    tiers: [
+      { label: "Bed & Breakfast", resSgl: "11,500", resDbl: "13,500", nrSgl: "$120", nrDbl: "$140" },
+      { label: "Half Board", resSgl: "13,000", resDbl: "16,500", nrSgl: "$140", nrDbl: "$160" },
+      { label: "Full Board", resSgl: "14,500", resDbl: "17,500", nrSgl: "$160", nrDbl: "$180" },
+    ],
   },
   {
     name: "Family Room",
     image: familyImage,
     description: "Generous space for the whole family with interconnected areas and kid-friendly amenities.",
     amenities: ["Free Wi-Fi", "Extra Beds", "Family Friendly"],
-    residents: { sgl: "From 15,500 KES" },
-    nonResidents: { sgl: "From $170" },
+    tiers: [
+      { label: "Bed & Breakfast", resSgl: "16,500", nrDbl: "$180" },
+      { label: "Half Board", resSgl: "22,500", nrDbl: "$210" },
+      { label: "Full Board", resSgl: "28,500", nrDbl: "$270" },
+    ],
   },
   {
     name: "Deluxe Twin",
     image: twinImage,
     description: "Two comfortable beds in a well-appointed room, ideal for friends or colleagues traveling together.",
     amenities: ["Free Wi-Fi", "Twin Beds", "Work Desk"],
-    residents: { sgl: "From 11,500 KES" },
-    nonResidents: { sgl: "From $120" },
+    tiers: [
+      { label: "Bed & Breakfast", resDbl: "12,500", nrDbl: "$130" },
+      { label: "Half Board", resDbl: "15,000", nrDbl: "$150" },
+      { label: "Full Board", resDbl: "17,000", nrDbl: "$170" },
+    ],
   },
 ];
 
@@ -83,20 +95,37 @@ const Rooms = () => (
                   ))}
                 </div>
 
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="rounded-xl bg-secondary p-5">
-                    <p className="text-xs text-muted-foreground font-medium tracking-wide uppercase mb-2">Residents</p>
-                    <p className="text-lg font-bold text-foreground font-display">{room.residents.sgl}</p>
-                    {room.residents.dbl && (
-                      <p className="text-xs text-muted-foreground mt-1">DBL: {room.residents.dbl}</p>
-                    )}
-                  </div>
-                  <div className="rounded-xl bg-secondary p-5">
-                    <p className="text-xs text-muted-foreground font-medium tracking-wide uppercase mb-2">Non-Residents</p>
-                    <p className="text-lg font-bold text-foreground font-display">{room.nonResidents.sgl}</p>
-                    {room.nonResidents.dbl && (
-                      <p className="text-xs text-muted-foreground mt-1">DBL: {room.nonResidents.dbl}</p>
-                    )}
+                <div className="space-y-3 mb-6">
+                  <p className="text-xs text-muted-foreground font-medium tracking-wide uppercase mb-2">Rates (KES / USD)</p>
+                  <div className="rounded-xl bg-secondary overflow-hidden">
+                    <table className="w-full text-sm">
+                      <thead>
+                        <tr className="border-b border-border/50">
+                          <th className="text-left p-3 text-xs text-muted-foreground font-medium">Plan</th>
+                          <th className="text-center p-3 text-xs text-muted-foreground font-medium">Resident</th>
+                          <th className="text-center p-3 text-xs text-muted-foreground font-medium">Non-Resident</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {room.tiers.map((tier) => (
+                          <tr key={tier.label} className="border-b border-border/30 last:border-0">
+                            <td className="p-3 text-xs font-medium text-foreground">{tier.label}</td>
+                            <td className="p-3 text-center text-xs text-foreground">
+                              {tier.resSgl && tier.resDbl
+                                ? `${tier.resSgl} / ${tier.resDbl}`
+                                : tier.resSgl
+                                  ? tier.resSgl
+                                  : tier.resDbl}
+                            </td>
+                            <td className="p-3 text-center text-xs text-foreground">
+                              {tier.nrSgl && tier.nrDbl
+                                ? `${tier.nrSgl} / ${tier.nrDbl}`
+                                : tier.nrDbl}
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
                   </div>
                 </div>
 

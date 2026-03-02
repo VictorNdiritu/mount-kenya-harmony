@@ -7,6 +7,7 @@ import logo from "@/assets/warwick-logo-nobg.png";
 const navLinks = [
   { label: "Home", path: "/" },
   { label: "Rooms", path: "/rooms" },
+  { label: "Conferencing", path: "/conferencing" },
   { label: "Amenities", path: "/amenities" },
   { label: "Activities", path: "/activities" },
   { label: "Blog", path: "/blog" },
