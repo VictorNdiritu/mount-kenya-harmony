@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Index from "./pages/Index";
 import Rooms from "./pages/Rooms";
+import Conferencing from "./pages/Conferencing";
 import Amenities from "./pages/Amenities";
 import Activities from "./pages/Activities";
 import Blog from "./pages/Blog";
