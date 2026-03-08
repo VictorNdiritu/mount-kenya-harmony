@@ -38,7 +38,7 @@ const Navbar = () => {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
             ? "glass shadow-lg border-b border-border/50 py-2"
-            : "bg-transparent py-4"
+            : "bg-white/80 backdrop-blur-md py-4"
         }`}
       >
         <nav className="container mx-auto flex items-center justify-between px-6 lg:px-10">
@@ -51,10 +51,10 @@ const Navbar = () => {
               transition={{ type: "spring", stiffness: 300 }}
             />
             <div className="hidden sm:block">
-              <span className="font-display font-semibold text-base tracking-wide text-primary-foreground">
+              <span className="font-display font-semibold text-base tracking-wide text-foreground">
                 THE WARWICK
               </span>
-              <span className="block text-[10px] font-body tracking-[0.25em] uppercase text-primary-foreground/70">
+              <span className="block text-[10px] font-body tracking-[0.25em] uppercase text-muted-foreground">
                 Hotel Nanyuki
               </span>
             </div>
@@ -67,13 +67,9 @@ const Navbar = () => {
                 <Link
                   to={link.path}
                   className={`relative px-4 py-2 text-sm font-medium tracking-wide transition-colors rounded-full ${
-                    scrolled
-                      ? location.pathname === link.path
-                        ? "text-primary bg-primary/10"
-                        : "text-muted-foreground hover:text-foreground hover:bg-muted"
-                      : location.pathname === link.path
-                        ? "text-primary-foreground bg-primary-foreground/15"
-                        : "text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10"
+                    location.pathname === link.path
+                      ? "text-primary bg-primary/10"
+                      : "text-foreground hover:text-primary hover:bg-muted"
                   }`}
                 >
                   {link.label}
@@ -94,9 +90,7 @@ const Navbar = () => {
           {/* Mobile toggle */}
           <button
             onClick={() => setOpen(!open)}
-            className={`lg:hidden p-2 rounded-full transition-colors ${
-              scrolled ? "text-foreground hover:bg-muted" : "text-primary-foreground hover:bg-primary-foreground/10"
-            }`}
+            className="lg:hidden p-2 rounded-full text-foreground hover:bg-muted transition-colors"
             aria-label="Toggle menu"
           >
             {open ? <X size={22} /> : <Menu size={22} />}
