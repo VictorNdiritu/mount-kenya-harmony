@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Bed, Mountain, MessageCircle, ArrowRight, Star, ChevronRight, Utensils, Users, Waves } from "lucide-react";
+import { Bed, Mountain, MessageCircle, ArrowRight, Star, ChevronRight, Utensils, Users, Waves, Calendar, Newspaper } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 
 import heroImage from "@/assets/homepage-photos/IMG-20250408-WA0050.jpg";
@@ -9,6 +9,8 @@ import roomImage from "@/assets/homepage-photos/sup-deluxe.jpg";
 import gardenImage from "@/assets/Amenities/IMG_9385.jpg";
 import diningImage from "@/assets/Amenities/Restaurant.jpg";
 import activityImage from "@/assets/gen-hiking.jpg";
+import confImage from "@/assets/conferences/IMG_9442.jpg";
+import bookingImage from "@/assets/homepage-photos/SUPERIOR- Room.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -70,7 +72,8 @@ const Index = () => {
           fetchPriority="high"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 hero-gradient" />
+        {/* Stronger dark overlay for text contrast */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/70" />
 
         <div className="relative z-10 w-full px-6 md:px-12 lg:px-20">
           <div className="container mx-auto max-w-6xl">
@@ -84,23 +87,17 @@ const Index = () => {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
-                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-dark text-xs font-medium tracking-[0.2em] uppercase mb-6"
-                style={{ color: "#53abb5", WebkitTextFillColor: "#53abb5" }}
+                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-md text-xs font-medium tracking-[0.2em] uppercase mb-6 text-white"
               >
-                <Star size={12} style={{ color: "#53abb5" }} /> Nanyuki, Kenya
+                <Star size={12} className="text-primary" /> Nanyuki, Kenya
               </motion.p>
 
-              <h1
-                className="font-display text-5xl md:text-7xl font-bold leading-[1.1] mb-6 text-primary-foreground"
-              >
+              <h1 className="font-display text-5xl md:text-7xl font-bold leading-[1.1] mb-6 text-white drop-shadow-lg">
                 Where comfort meets{" "}
-                <span className="text-primary-foreground">nature</span>
+                <span className="text-white">nature</span>
               </h1>
 
-              <p
-                className="text-lg md:text-xl leading-relaxed mb-10 max-w-lg"
-                style={{ color: "#000000", WebkitTextFillColor: "#000000" }}
-              >
+              <p className="text-lg md:text-xl leading-relaxed mb-10 max-w-lg text-white/90 drop-shadow-md">
                 An independent boutique hotel at the foothills of Mount Kenya — your gateway to adventure and serenity.
               </p>
 
@@ -114,7 +111,7 @@ const Index = () => {
 
                 <Link
                   to="/booking"
-                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full glass-dark text-primary-foreground font-body text-sm font-semibold tracking-wide hover:bg-primary-foreground/20 transition-all border border-primary-foreground/20"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white/15 backdrop-blur-md text-white font-body text-sm font-semibold tracking-wide hover:bg-white/25 transition-all border border-white/30"
                 >
                   Book Your Stay
                 </Link>
@@ -128,8 +125,8 @@ const Index = () => {
           animate={{ y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 2 }}
         >
-          <div className="w-6 h-10 rounded-full border-2 border-primary-foreground/30 flex items-start justify-center pt-2">
-            <div className="w-1 h-2.5 rounded-full bg-primary-foreground/60" />
+          <div className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center pt-2">
+            <div className="w-1 h-2.5 rounded-full bg-white/60" />
           </div>
         </motion.div>
       </section>
@@ -157,11 +154,11 @@ const Index = () => {
               </motion.p>
 
               <motion.p variants={fadeUp} custom={3} className="text-muted-foreground leading-relaxed mb-5">
-                Whether you're here for business, adventure, or a peaceful getaway, our serene gardens, world-class dining, and warm Kenyan hospitality make us the perfect base for exploring the wonders of the Mount Kenya region. From the renowned Ol Pejeta Conservancy to the breathtaking Ngare Ndare Forest canopy walk, adventure is always just a short drive away.
+                Whether you're here for business, adventure, or a peaceful getaway, our serene gardens, world-class dining, and warm Kenyan hospitality make us the perfect base for exploring the wonders of the Mount Kenya region.
               </motion.p>
 
               <motion.p variants={fadeUp} custom={3.5} className="text-muted-foreground leading-relaxed mb-8">
-                Our hotel features a refreshing swimming pool, beautifully landscaped gardens, modern conference facilities, and an on-site restaurant serving both local and international cuisine. Whether you're planning a corporate retreat, a family holiday, or a romantic getaway, The Warwick delivers an unforgettable experience.
+                Our hotel features a refreshing swimming pool, beautifully landscaped gardens, modern conference facilities, and an on-site restaurant serving both local and international cuisine.
               </motion.p>
 
               <motion.div variants={fadeUp} custom={4}>
@@ -231,8 +228,48 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Conferencing Snippet */}
+      <section className="section-padding overflow-hidden">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <img
+                src={confImage}
+                alt="Conference and event facilities at The Warwick Hotel Nanyuki"
+                loading="lazy"
+                className="rounded-2xl shadow-2xl w-full aspect-[4/3] object-cover"
+              />
+            </motion.div>
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }}>
+              <motion.div variants={fadeUp} custom={0} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold tracking-[0.15em] uppercase mb-4">
+                <Calendar size={12} /> Conferencing & Events
+              </motion.div>
+              <motion.h2 variants={fadeUp} custom={1} className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Host Your Next Event with Us
+              </motion.h2>
+              <motion.p variants={fadeUp} custom={2} className="text-muted-foreground leading-relaxed mb-4">
+                Our fully equipped conference facilities are ideal for corporate retreats, workshops, team-building events, and private celebrations. With flexible seating arrangements, modern AV equipment, and a serene setting at the foothills of Mount Kenya, your event will be one to remember.
+              </motion.p>
+              <motion.p variants={fadeUp} custom={3} className="text-muted-foreground leading-relaxed mb-6">
+                We offer full-day and half-day conference packages including meals, beverages, and dedicated event coordination.
+              </motion.p>
+              <motion.div variants={fadeUp} custom={4}>
+                <Link to="/conferencing" className="inline-flex items-center gap-2 text-primary font-medium text-sm hover:gap-3 transition-all group">
+                  Explore conferencing <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </motion.div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Us */}
-      <section className="section-padding">
+      <section className="bg-secondary section-padding">
         <div className="container mx-auto max-w-6xl">
           <motion.div className="text-center mb-14" initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <motion.p variants={fadeUp} custom={0} className="text-primary font-body text-sm font-semibold tracking-[0.2em] uppercase mb-3">Why Choose Us</motion.p>
@@ -269,8 +306,93 @@ const Index = () => {
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* Book Your Stay Snippet */}
+      <section className="section-padding overflow-hidden">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }}>
+              <motion.div variants={fadeUp} custom={0} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold tracking-[0.15em] uppercase mb-4">
+                <Bed size={12} /> Reservations
+              </motion.div>
+              <motion.h2 variants={fadeUp} custom={1} className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Book Your Stay Online
+              </motion.h2>
+              <motion.p variants={fadeUp} custom={2} className="text-muted-foreground leading-relaxed mb-4">
+                Reserve your room directly through our website. Choose from Deluxe, Superior Deluxe, Family, or Twin rooms with flexible meal plans — Bed & Breakfast, Half Board, or Full Board.
+              </motion.p>
+              <motion.p variants={fadeUp} custom={3} className="text-muted-foreground leading-relaxed mb-6">
+                Special rates available for residents and non-residents. Our team will confirm your booking and assist with any special requests.
+              </motion.p>
+              <motion.div variants={fadeUp} custom={4}>
+                <Link to="/booking" className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground font-body text-sm font-semibold tracking-wide hover:bg-aqua-dark transition-all hover:gap-3 hover:shadow-xl hover:shadow-primary/20">
+                  Book Now <ArrowRight size={16} />
+                </Link>
+              </motion.div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <img
+                src={bookingImage}
+                alt="Superior room at The Warwick Hotel Nanyuki"
+                loading="lazy"
+                className="rounded-2xl shadow-2xl w-full aspect-[4/3] object-cover"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Blog Snippet */}
       <section className="bg-secondary section-padding">
+        <div className="container mx-auto max-w-6xl">
+          <motion.div className="text-center mb-14" initial="hidden" whileInView="visible" viewport={{ once: true }}>
+            <motion.p variants={fadeUp} custom={0} className="text-primary font-body text-sm font-semibold tracking-[0.2em] uppercase mb-3">From Our Blog</motion.p>
+            <motion.h2 variants={fadeUp} custom={1} className="font-display text-4xl font-bold text-foreground">Travel Stories & Guides</motion.h2>
+          </motion.div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { title: "Top 5 Things to Do in Nanyuki", date: "Jan 15, 2026", excerpt: "Discover the hidden gems of Nanyuki town at the foothills of Mount Kenya.", slug: "top-5-things-nanyuki" },
+              { title: "A Guide to Climbing Mount Kenya", date: "Jan 8, 2026", excerpt: "Everything you need to know before embarking on your Mount Kenya adventure.", slug: "climbing-mount-kenya" },
+              { title: "Wildlife Safari at Ol Pejeta", date: "Dec 20, 2025", excerpt: "Why Ol Pejeta Conservancy should be on every traveller's bucket list.", slug: "ol-pejeta-safari" },
+            ].map((post, i) => (
+              <motion.div
+                key={post.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.5 }}
+              >
+                <Link to={`/blog/${post.slug}`} className="block group">
+                  <div className="bg-background rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-shadow">
+                    <div className="aspect-[16/9] bg-muted flex items-center justify-center">
+                      <Newspaper size={36} className="text-muted-foreground/30" />
+                    </div>
+                    <div className="p-6">
+                      <p className="text-xs text-primary font-body font-semibold uppercase tracking-wide mb-2">{post.date}</p>
+                      <h3 className="font-display font-bold text-foreground mb-2 group-hover:text-primary transition-colors">{post.title}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{post.excerpt}</p>
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <Link to="/blog" className="inline-flex items-center gap-2 text-primary font-medium text-sm hover:gap-3 transition-all group">
+              View all posts <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="section-padding">
         <div className="container mx-auto max-w-4xl">
           <motion.div className="text-center mb-14" initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <motion.p variants={fadeUp} custom={0} className="text-primary font-body text-sm font-semibold tracking-[0.2em] uppercase mb-3">FAQ</motion.p>
@@ -291,7 +413,7 @@ const Index = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
-                className="bg-background rounded-xl p-6 group cursor-pointer"
+                className="bg-secondary rounded-xl p-6 group cursor-pointer"
               >
                 <summary className="font-display font-semibold text-foreground list-none flex items-center justify-between">
                   {item.q}
@@ -305,7 +427,7 @@ const Index = () => {
       </section>
 
       {/* CTA */}
-      <section className="section-padding">
+      <section className="bg-secondary section-padding">
         <div className="container mx-auto max-w-3xl text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <motion.h2 variants={fadeUp} custom={0} className="font-display text-4xl font-bold text-foreground mb-4">Ready to Experience Mount Kenya?</motion.h2>
