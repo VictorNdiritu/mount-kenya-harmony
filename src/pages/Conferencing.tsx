@@ -72,7 +72,7 @@ const Conferencing = () => (
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <img src={confImg2} alt="Conference hall at The Warwick Hotel Nanyuki" className="w-full rounded-2xl shadow-2xl aspect-[4/3] object-cover" />
+            <img src={confImg2} alt="Conference hall at The Warwick Hotel Nanyuki" loading="lazy" className="w-full rounded-2xl shadow-2xl aspect-[4/3] object-cover" />
           </motion.div>
         </div>
       </div>
