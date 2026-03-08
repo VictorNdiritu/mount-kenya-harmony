@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import PageHero from "@/components/PageHero";
-import { Send, CalendarDays, Users, BedDouble } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
+import { Send, ChevronRight } from "lucide-react";
 import heroImg from "@/assets/hero-image-1.jpg";
 
 const fadeUp = {
@@ -51,11 +53,31 @@ const Booking = () => {
 
   return (
     <>
+      <SEOHead
+        title="Book Your Stay"
+        description="Reserve your room at The Warwick Hotel Nanyuki. Choose from Deluxe, Superior Deluxe, Family, and Twin rooms. Bed & Breakfast, Half Board, and Full Board meal plans available for residents and non-residents."
+        canonical="/booking"
+      />
       <PageHero
         image={heroImg}
         title="Book Your Stay"
         subtitle="Reserve your room at The Warwick"
       />
+
+      {/* Intro */}
+      <section className="section-padding pb-0">
+        <div className="container mx-auto max-w-3xl">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }}>
+            <motion.h2 variants={fadeUp} custom={0} className="font-display text-3xl font-bold text-foreground mb-4">Make a Reservation</motion.h2>
+            <motion.p variants={fadeUp} custom={1} className="text-muted-foreground leading-relaxed mb-4">
+              Complete the form below to submit a booking request for The Warwick Hotel Nanyuki. Our reservations team will confirm availability and send you a confirmation within 24 hours. For immediate assistance, call us at <a href="tel:+254799388888" className="text-primary hover:underline">+254 799 388 888</a>.
+            </motion.p>
+            <motion.p variants={fadeUp} custom={2} className="text-muted-foreground leading-relaxed">
+              Not sure which room to choose? <Link to="/rooms" className="text-primary hover:underline">Browse our rooms and rates</Link> to find the perfect option for your stay.
+            </motion.p>
+          </motion.div>
+        </div>
+      </section>
 
       <section className="section-padding">
         <div className="container mx-auto max-w-3xl">
@@ -120,6 +142,13 @@ const Booking = () => {
               </select>
             </div>
 
+            <select name="Meal Plan" className={inputClass}>
+              <option value="">Select Meal Plan</option>
+              <option>Bed & Breakfast</option>
+              <option>Half Board</option>
+              <option>Full Board</option>
+            </select>
+
             <textarea
               name="Special Requests"
               placeholder="Special requests or notes..."
@@ -129,7 +158,7 @@ const Booking = () => {
 
             {success && (
               <p className="text-green-600 text-sm text-center">
-                Booking request sent successfully. We will contact you shortly.
+                Booking request sent successfully. We will contact you shortly to confirm your reservation.
               </p>
             )}
 
@@ -142,6 +171,29 @@ const Booking = () => {
               {loading ? "Sending..." : "Submit Booking Request"}
             </button>
           </motion.form>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="bg-secondary section-padding">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="font-display text-3xl font-bold text-foreground mb-8 text-center">Booking FAQ</h2>
+          <div className="space-y-4">
+            {[
+              { q: "How will I receive my booking confirmation?", a: "After submitting your request, our team will review availability and send a confirmation via email within 24 hours. For urgent bookings, call us directly." },
+              { q: "What is the cancellation policy?", a: "Cancellations made 48 hours or more before check-in receive a full refund. Cancellations within 48 hours may incur a one-night charge. Please contact us for specific terms." },
+              { q: "Can I modify my reservation after booking?", a: "Yes. Contact us by email or phone to adjust dates, room type, or meal plan. Changes are subject to availability." },
+              { q: "Do you accept credit card payments?", a: "Yes, we accept Visa, Mastercard, and M-Pesa payments. Payment details will be shared in your confirmation email." },
+            ].map((item, i) => (
+              <details key={i} className="bg-background rounded-xl p-6 group cursor-pointer">
+                <summary className="font-display font-semibold text-foreground list-none flex items-center justify-between">
+                  {item.q}
+                  <ChevronRight size={16} className="text-primary group-open:rotate-90 transition-transform shrink-0 ml-4" />
+                </summary>
+                <p className="text-muted-foreground mt-3 leading-relaxed text-sm">{item.a}</p>
+              </details>
+            ))}
+          </div>
         </div>
       </section>
     </>
