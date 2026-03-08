@@ -220,7 +220,7 @@ const Index = () => {
               >
                 <Link to={item.link} className="block group">
                   <div className="rounded-2xl overflow-hidden mb-4">
-                    <img src={item.img} alt={item.title} className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <img src={item.img} alt={item.title} loading="lazy" className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-700" />
                   </div>
                   <h3 className="font-display font-bold text-foreground mb-2 group-hover:text-primary transition-colors">{item.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>

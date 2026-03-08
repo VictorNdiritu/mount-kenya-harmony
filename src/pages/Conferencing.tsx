@@ -171,7 +171,7 @@ const Conferencing = () => (
               transition={{ delay: i * 0.05, duration: 0.5 }}
               className="rounded-xl overflow-hidden aspect-[4/3] group"
             >
-              <img src={img} alt={`Conference and event space ${i + 1} at The Warwick Hotel`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <img src={img} alt={`Conference and event space ${i + 1} at The Warwick Hotel`} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
             </motion.div>
           ))}
         </div>

@@ -125,7 +125,7 @@ const Amenities = () => (
               transition={{ delay: i * 0.06, duration: 0.5 }}
               className="rounded-xl overflow-hidden aspect-[4/3] group relative"
             >
-              <img src={img.src} alt={img.label} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <img src={img.src} alt={img.label} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
                 <span className="text-white text-sm font-medium">{img.label}</span>
               </div>

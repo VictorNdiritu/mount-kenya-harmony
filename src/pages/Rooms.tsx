@@ -113,7 +113,7 @@ const Rooms = () => (
             >
               <motion.div variants={fadeUp} custom={0} className={i % 2 === 1 ? "lg:order-2" : ""}>
                 <div className="relative rounded-2xl overflow-hidden group">
-                  <img src={room.image} alt={`${room.name} at The Warwick Hotel Nanyuki`} className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <img src={room.image} alt={`${room.name} at The Warwick Hotel Nanyuki`} loading="lazy" className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
               </motion.div>
               <motion.div variants={fadeUp} custom={1} className={i % 2 === 1 ? "lg:order-1" : ""}>
