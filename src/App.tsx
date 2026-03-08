@@ -11,6 +11,7 @@ import Conferencing from "./pages/Conferencing";
 import Amenities from "./pages/Amenities";
 import Activities from "./pages/Activities";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 import Booking from "./pages/Booking";
 import NotFound from "./pages/NotFound";
@@ -32,6 +33,7 @@ const App = () => (
               <Route path="/amenities" element={<Amenities />} />
               <Route path="/activities" element={<Activities />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/booking" element={<Booking />} />
             </Route>
