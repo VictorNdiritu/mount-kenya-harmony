@@ -72,7 +72,7 @@ const Conferencing = () => (
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <img src={confImg2} alt="Conference hall at The Warwick Hotel Nanyuki" className="w-full rounded-2xl shadow-2xl aspect-[4/3] object-cover" />
+            <img src={confImg2} alt="Conference hall at The Warwick Hotel Nanyuki" loading="lazy" className="w-full rounded-2xl shadow-2xl aspect-[4/3] object-cover" />
           </motion.div>
         </div>
       </div>
@@ -171,7 +171,7 @@ const Conferencing = () => (
               transition={{ delay: i * 0.05, duration: 0.5 }}
               className="rounded-xl overflow-hidden aspect-[4/3] group"
             >
-              <img src={img} alt={`Conference and event space ${i + 1} at The Warwick Hotel`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <img src={img} alt={`Conference and event space ${i + 1} at The Warwick Hotel`} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
             </motion.div>
           ))}
         </div>

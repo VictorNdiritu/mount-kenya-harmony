@@ -8,7 +8,7 @@ interface PageHeroProps {
 
 const PageHero = ({ image, title, subtitle }: PageHeroProps) => (
   <section className="relative h-[60vh] min-h-[400px] flex items-end overflow-hidden">
-    <img src={image} alt={title} className="absolute inset-0 w-full h-full object-cover scale-105" />
+    <img src={image} alt={title} loading="eager" fetchPriority="high" className="absolute inset-0 w-full h-full object-cover scale-105" />
     <div className="absolute inset-0 hero-gradient" />
     <div className="relative z-10 w-full px-6 pb-16 md:px-12 lg:px-20">
       <div className="container mx-auto max-w-6xl">
