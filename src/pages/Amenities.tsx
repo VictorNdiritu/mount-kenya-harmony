@@ -103,7 +103,7 @@ const Amenities = () => (
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <img src={poolImg} alt="The Warwick Hotel Nanyuki swimming pool and garden view" className="w-full rounded-2xl shadow-2xl aspect-[21/9] object-cover" />
+          <img src={poolImg} alt="The Warwick Hotel Nanyuki swimming pool and garden view" loading="lazy" className="w-full rounded-2xl shadow-2xl aspect-[21/9] object-cover" />
         </motion.div>
       </div>
     </section>
