@@ -185,6 +185,7 @@ const Index = () => {
                 <img
                   src={poolImage}
                   alt="The Warwick Hotel swimming pool and gardens"
+                  loading="lazy"
                   className="rounded-2xl shadow-2xl w-full aspect-[3/4] object-cover"
                 />
                 <div className="absolute -bottom-6 -left-6 w-32 h-32 rounded-2xl bg-primary/10 -z-10" />
