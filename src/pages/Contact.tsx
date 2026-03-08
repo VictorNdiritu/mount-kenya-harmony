@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import PageHero from "@/components/PageHero";
-import { Mail, Phone, MapPin, Send, ArrowRight } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
+import { Mail, Phone, MapPin, Send, ChevronRight } from "lucide-react";
 import heroImg from "@/assets/hero-image-1.jpg";
 
 const fadeUp = {
@@ -20,7 +22,27 @@ const Contact = () => {
 
   return (
     <>
+      <SEOHead
+        title="Contact Us"
+        description="Get in touch with The Warwick Hotel Nanyuki. Reach us by email at info@thewarwickhotel.co.ke, phone +254 799 388 888, or WhatsApp. Send a reservation inquiry or guest feedback."
+        canonical="/contact"
+      />
       <PageHero image={heroImg} title="Contact Us" subtitle="We'd love to hear from you" />
+
+      {/* Intro */}
+      <section className="section-padding pb-0">
+        <div className="container mx-auto max-w-6xl">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} className="max-w-3xl">
+            <motion.h2 variants={fadeUp} custom={0} className="font-display text-3xl font-bold text-foreground mb-4">We're Here to Help</motion.h2>
+            <motion.p variants={fadeUp} custom={1} className="text-muted-foreground leading-relaxed mb-4">
+              Whether you have a question about our rooms, need to plan a conference, or want to arrange activities during your stay, our friendly team is ready to assist. Reach out using any of the methods below and we'll respond within 24 hours.
+            </motion.p>
+            <motion.p variants={fadeUp} custom={2} className="text-muted-foreground leading-relaxed">
+              For direct reservations, you can also use our <Link to="/booking" className="text-primary hover:underline">online booking page</Link> or call us during business hours. We look forward to welcoming you to The Warwick Hotel Nanyuki.
+            </motion.p>
+          </motion.div>
+        </div>
+      </section>
 
       <section className="section-padding">
         <div className="container mx-auto max-w-6xl">
@@ -48,6 +70,16 @@ const Contact = () => {
                     </div>
                   </motion.div>
                 ))}
+              </div>
+
+              <div className="pt-4">
+                <h3 className="font-display font-semibold text-foreground mb-3">Quick Links</h3>
+                <ul className="space-y-2 text-sm">
+                  <li><Link to="/rooms" className="text-muted-foreground hover:text-primary transition-colors">View Rooms & Rates</Link></li>
+                  <li><Link to="/conferencing" className="text-muted-foreground hover:text-primary transition-colors">Conference Facilities</Link></li>
+                  <li><Link to="/activities" className="text-muted-foreground hover:text-primary transition-colors">Activities & Excursions</Link></li>
+                  <li><Link to="/booking" className="text-muted-foreground hover:text-primary transition-colors">Book Online</Link></li>
+                </ul>
               </div>
             </motion.div>
 
@@ -103,7 +135,7 @@ const Contact = () => {
           <motion.div className="text-center mb-10" initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <motion.p variants={fadeUp} custom={0} className="text-primary font-body text-sm font-semibold tracking-[0.2em] uppercase mb-3">Feedback</motion.p>
             <motion.h2 variants={fadeUp} custom={1} className="font-display text-4xl font-bold text-foreground">Guest Feedback</motion.h2>
-            <motion.p variants={fadeUp} custom={2} className="text-muted-foreground mt-3">We value your experience. Share your thoughts with us.</motion.p>
+            <motion.p variants={fadeUp} custom={2} className="text-muted-foreground mt-3">We value your experience. Share your thoughts with us so we can continue to improve our service and hospitality.</motion.p>
           </motion.div>
           <form
             className="space-y-4 bg-background rounded-2xl p-8 md:p-10 shadow-sm"
@@ -136,6 +168,28 @@ const Contact = () => {
               Submit Feedback
             </button>
           </form>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="section-padding">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="font-display text-3xl font-bold text-foreground mb-8 text-center">Contact FAQ</h2>
+          <div className="space-y-4">
+            {[
+              { q: "What are your office hours?", a: "Our front desk is staffed 24/7. For reservations and general inquiries, our office operates from 7:00 AM to 10:00 PM East Africa Time." },
+              { q: "How do I get to the hotel from Nairobi?", a: "The hotel is approximately 200 km from Nairobi, about a 3-hour drive via the Nairobi-Nanyuki highway. You can also fly to Nanyuki Airstrip — we can arrange airport transfers." },
+              { q: "Can I make a reservation by phone?", a: "Yes, call us at +254 799 388 888 or email info@thewarwickhotel.co.ke. You can also book online through our booking page." },
+            ].map((item, i) => (
+              <details key={i} className="bg-secondary rounded-xl p-6 group cursor-pointer">
+                <summary className="font-display font-semibold text-foreground list-none flex items-center justify-between">
+                  {item.q}
+                  <ChevronRight size={16} className="text-primary group-open:rotate-90 transition-transform shrink-0 ml-4" />
+                </summary>
+                <p className="text-muted-foreground mt-3 leading-relaxed text-sm">{item.a}</p>
+              </details>
+            ))}
+          </div>
         </div>
       </section>
     </>
