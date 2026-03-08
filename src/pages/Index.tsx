@@ -66,6 +66,8 @@ const Index = () => {
         <img
           src={heroImage}
           alt="The Warwick Hotel Nanyuki — boutique hotel with Mount Kenya views"
+          loading="eager"
+          fetchPriority="high"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 hero-gradient" />
