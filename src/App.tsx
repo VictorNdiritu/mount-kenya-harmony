@@ -14,6 +14,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 import Booking from "./pages/Booking";
+import EasterCantata from "./pages/EasterCantata";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
