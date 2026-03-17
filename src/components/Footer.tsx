@@ -82,8 +82,12 @@ const Footer = () => (
         </div>
       </div>
 
-      <div className="mt-16 pt-8 border-t border-border text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} The Warwick Hotel Nanyuki. All rights reserved.
+      {/* Footer Bottom */}
+      <div className="mt-16 pt-8 border-t border-border text-center text-xs text-muted-foreground space-y-1">
+        <div>© {new Date().getFullYear()} The Warwick Hotel Nanyuki. All rights reserved.</div>
+        <div className="text-[10px]">
+          Managed by <a href="https://creekoxley.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary underline">CreekOxley</a>
+        </div>
       </div>
     </div>
   </footer>
