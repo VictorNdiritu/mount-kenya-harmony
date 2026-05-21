@@ -15,6 +15,8 @@ import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 import Booking from "./pages/Booking";
 import EasterCantata from "./pages/EasterCantata";
+import Feedback from "./pages/Feedback";
+import PreCheckIn from "./pages/PreCheckIn";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -38,6 +40,8 @@ const App = () => (
               <Route path="/contact" element={<Contact />} />
               <Route path="/booking" element={<Booking />} />
               <Route path="/easter-cantata" element={<EasterCantata />} />
+              <Route path="/contact/feedback" element={<Feedback />} />
+              <Route path="/booking/pre-check-in" element={<PreCheckIn />} />
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>
