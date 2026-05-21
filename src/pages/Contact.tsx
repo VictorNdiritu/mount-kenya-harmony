@@ -139,19 +139,36 @@ const Contact = () => {
           </motion.div>
           <form
             className="space-y-4 bg-background rounded-2xl p-8 md:p-10 shadow-sm"
-            onSubmit={(e) => {
+            onSubmit={async (e) => {
               e.preventDefault();
-              alert("Thank you for your feedback!");
-              setFeedbackForm({ name: "", email: "", rating: "", comments: "" });
+              const form = e.currentTarget;
+              const formData = new FormData(form);
+              try {
+                const res = await fetch("https://formspree.io/f/mojbegdn", {
+                  method: "POST",
+                  body: formData,
+                  headers: { Accept: "application/json" },
+                });
+                const data = await res.json();
+                if (res.ok && !data.errors) {
+                  alert("Thank you for your feedback!");
+                  form.reset();
+                  setFeedbackForm({ name: "", email: "", rating: "", comments: "" });
+                } else {
+                  alert("Something went wrong. Please try again.");
+                }
+              } catch {
+                alert("Network error. Please try again.");
+              }
             }}
           >
             <div className="grid sm:grid-cols-2 gap-4">
-              <input type="text" placeholder="Your Name" required className={inputClass}
+              <input name="name" type="text" placeholder="Your Name" required maxLength={100} className={inputClass}
                 value={feedbackForm.name} onChange={(e) => setFeedbackForm({ ...feedbackForm, name: e.target.value })} />
-              <input type="email" placeholder="Email Address" className={inputClass}
+              <input name="email" type="email" placeholder="Email Address" maxLength={255} className={inputClass}
                 value={feedbackForm.email} onChange={(e) => setFeedbackForm({ ...feedbackForm, email: e.target.value })} />
             </div>
-            <select className={inputClass}
+            <select name="rating" className={inputClass}
               value={feedbackForm.rating} onChange={(e) => setFeedbackForm({ ...feedbackForm, rating: e.target.value })}>
               <option value="">Rate your experience</option>
               <option>⭐⭐⭐⭐⭐ Excellent</option>
@@ -160,13 +177,19 @@ const Contact = () => {
               <option>⭐⭐ Fair</option>
               <option>⭐ Poor</option>
             </select>
-            <textarea placeholder="Share your experience..." rows={4} required
+            <textarea name="comments" placeholder="Share your experience..." rows={4} required maxLength={2000}
               className={`resize-none ${inputClass}`}
               value={feedbackForm.comments} onChange={(e) => setFeedbackForm({ ...feedbackForm, comments: e.target.value })} />
             <button type="submit"
               className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground font-body text-sm font-semibold tracking-wide hover:bg-aqua-dark transition-all hover:shadow-lg hover:shadow-primary/20">
               Submit Feedback
             </button>
+            <p className="text-center text-sm text-muted-foreground pt-2">
+              Want a more detailed form?{" "}
+              <Link to="/contact/feedback" className="text-primary hover:underline font-medium">
+                Open the full feedback page
+              </Link>
+            </p>
           </form>
         </div>
       </section>
