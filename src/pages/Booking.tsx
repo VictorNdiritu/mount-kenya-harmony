@@ -75,6 +75,9 @@ const Booking = () => {
             <motion.p variants={fadeUp} custom={2} className="text-muted-foreground leading-relaxed">
               Not sure which room to choose? <Link to="/rooms" className="text-primary hover:underline">Browse our rooms and rates</Link> to find the perfect option for your stay.
             </motion.p>
+            <motion.p variants={fadeUp} custom={3} className="text-muted-foreground leading-relaxed mt-4">
+              Already booked? <Link to="/booking/pre-check-in" className="text-primary hover:underline font-medium">Complete your pre-check-in</Link> to help us prepare for your arrival.
+            </motion.p>
           </motion.div>
         </div>
       </section>
