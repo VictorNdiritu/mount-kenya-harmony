@@ -1,0 +1,23 @@
+# The Warwick Hotel Nanyuki
+
+> An independent boutique hotel at the foothills of Mount Kenya, offering luxury accommodation, conferencing facilities, dining, and safari excursions in Laikipia, Kenya.
+
+The Warwick Hotel Nanyuki is a 4-star independent boutique hotel located in Nanyuki, at the foothills of Mount Kenya. The hotel features a contemporary glassmorphism-inspired design with an aqua and white color palette, combining modern aesthetics with the natural beauty of the surrounding landscape.
+
+## Pages
+
+- [Home](/): Overview of the hotel with hero section, highlights, and featured offerings.
+- [Rooms](/rooms): Luxury accommodation options including Executive Suites, Deluxe Rooms, Twin Rooms, and Family Rooms with pricing and amenities.
+- [Conferencing](/conferencing): Meeting and conference facilities for corporate events, seminars, and private gatherings with capacity details and rates.
+- [Amenities](/amenities): Hotel facilities including the restaurant, swimming pool, bar, gardens, and other guest services.
+- [Activities](/activities): Safari excursions, nature walks, Mount Kenya experiences, and local attractions available to guests.
+- [Blog](/blog): Travel guides, hotel news, and stories from Nanyuki and the Mount Kenya region.
+- [Contact](/contact): Contact information, location details, WhatsApp direct messaging, and feedback form for guest inquiries.
+- [Booking](/booking): Reservation information, booking process, and pre-check-in form for arriving guests.
+- [Easter Cantata](/easter-cantata): Annual Easter celebration event featuring performances and festivities at the hotel.
+
+## Optional
+
+- [Blog Posts](/blog/:slug): Individual articles and travel guides from the blog archive.
+- [Guest Feedback](/contact/feedback): Dedicated feedback form for guest reviews and suggestions.
+- [Pre-Check-In](/booking/pre-check-in): Form for arriving guests to submit arrival details and preferences ahead of time.
