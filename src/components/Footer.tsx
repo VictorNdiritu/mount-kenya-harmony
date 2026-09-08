@@ -125,20 +125,7 @@ const Footer = () => (
         <div>
           <h4 className="font-display font-semibold text-sm tracking-wider uppercase mb-5 text-foreground">Stay Updated</h4>
           <p className="text-sm text-muted-foreground mb-4">Subscribe for exclusive offers and travel stories from the Mount Kenya region.</p>
-          <form className="flex" onSubmit={(e) => e.preventDefault()}>
-            <input
-              type="email"
-              placeholder="Your email"
-              className="flex-1 px-4 py-3 text-sm rounded-l-full bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary"
-            />
-            <button
-              type="submit"
-              className="px-5 py-3 bg-primary text-primary-foreground text-sm font-medium rounded-r-full hover:bg-aqua-dark transition-colors"
-              aria-label="Subscribe to newsletter"
-            >
-              <ArrowRight size={16} />
-            </button>
-          </form>
+          <NewsletterForm />
         </div>
       </div>
 
