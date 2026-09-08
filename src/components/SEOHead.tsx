@@ -12,7 +12,7 @@ const SITE_NAME = "The Warwick Hotel Nanyuki";
 const BASE_URL = "https://thewarwickhotel.co.ke";
 
 const SEOHead = ({ title, description, canonical, type = "website", jsonLd }: SEOHeadProps) => {
-  const fullTitle = title === "Home" ? `${SITE_NAME} — Boutique Hotel at Mount Kenya` : `${title} | ${SITE_NAME}`;
+  const fullTitle = title === "Home" ? `${SITE_NAME} - Boutique Hotel at Mount Kenya` : `${title} | ${SITE_NAME}`;
   const url = canonical ? `${BASE_URL}${canonical}` : BASE_URL;
 
   return (

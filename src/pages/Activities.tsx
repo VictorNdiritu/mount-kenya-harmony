@@ -32,7 +32,7 @@ const categories = [
     intro: "The Laikipia region is one of Kenya's premier wildlife destinations, home to the Big Five and rare species found nowhere else. The Warwick Hotel's proximity to world-class conservancies makes it an ideal base for unforgettable safari experiences.",
     items: [
       { name: "Ol Pejeta Conservancy", desc: "Home to the last two northern white rhinos and the Big Five. Enjoy game drives, the chimpanzee sanctuary, and night safaris in this 90,000-acre conservancy." },
-      { name: "Bongo Tracking", desc: "Track the critically endangered mountain bongo antelope in the dense forests of Mount Kenya — a unique experience unavailable anywhere else." },
+      { name: "Bongo Tracking", desc: "Track the critically endangered mountain bongo antelope in the dense forests of Mount Kenya - a unique experience unavailable anywhere else." },
       { name: "Bird Watching", desc: "Spot over 300 species of birds across highland forests, wetlands, and open grasslands. Guided birding tours are available for enthusiasts." },
     ],
   },
@@ -52,7 +52,7 @@ const Activities = () => (
   <>
     <SEOHead
       title="Activities & Excursions"
-      description="Explore activities near The Warwick Hotel Nanyuki — Mount Kenya hiking, Ol Pejeta Conservancy safaris, Ngare Ndare Forest canopy walk, bird watching, trout fishing, rock climbing, and bongo tracking."
+      description="Explore activities near The Warwick Hotel Nanyuki - Mount Kenya hiking, Ol Pejeta Conservancy safaris, Ngare Ndare Forest canopy walk, bird watching, trout fishing, rock climbing, and bongo tracking."
       canonical="/activities"
     />
     <PageHero image={hikingImg} title="Activities & Excursions" subtitle="Adventures around Mount Kenya" />
@@ -63,7 +63,7 @@ const Activities = () => (
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} className="max-w-3xl">
           <motion.h2 variants={fadeUp} custom={0} className="font-display text-3xl font-bold text-foreground mb-4">Your Adventure Starts Here</motion.h2>
           <motion.p variants={fadeUp} custom={1} className="text-muted-foreground leading-relaxed mb-4">
-            The Warwick Hotel Nanyuki sits in one of Kenya's most exciting adventure regions. From the snow-capped peaks of Mount Kenya to the wildlife-rich savannahs of Laikipia, guests have access to a remarkable range of outdoor activities and cultural experiences — all within easy reach of the hotel.
+            The Warwick Hotel Nanyuki sits in one of Kenya's most exciting adventure regions. From the snow-capped peaks of Mount Kenya to the wildlife-rich savannahs of Laikipia, guests have access to a remarkable range of outdoor activities and cultural experiences - all within easy reach of the hotel.
           </motion.p>
           <motion.p variants={fadeUp} custom={2} className="text-muted-foreground leading-relaxed">
             Our concierge can arrange guided excursions, transport, and equipment hire for all activities listed below. Whether you're a seasoned mountaineer or a first-time safari-goer, we'll help you plan the perfect adventure. After a day of exploration, return to the comfort of your <Link to="/rooms" className="text-primary hover:underline">room</Link> and unwind at our <Link to="/amenities" className="text-primary hover:underline">pool and gardens</Link>.
@@ -124,7 +124,7 @@ const Activities = () => (
           {[
             { q: "Can the hotel arrange safari and hiking excursions?", a: "Yes. Our concierge desk can arrange all excursions including Ol Pejeta safaris, Mount Kenya hikes, Ngare Ndare visits, and more. We work with licensed guides and trusted operators." },
             { q: "How far is Ol Pejeta Conservancy from the hotel?", a: "Ol Pejeta is approximately 25 km from The Warwick Hotel, about a 30-minute drive. We can arrange transport and entry permits." },
-            { q: "Do I need special equipment for hiking Mount Kenya?", a: "For day hikes, good walking shoes and warm layers are sufficient. Multi-day treks require proper hiking gear — we can connect you with equipment hire services." },
+            { q: "Do I need special equipment for hiking Mount Kenya?", a: "For day hikes, good walking shoes and warm layers are sufficient. Multi-day treks require proper hiking gear - we can connect you with equipment hire services." },
             { q: "Is Ngare Ndare Forest suitable for children?", a: "Yes, the canopy walkway and forest trails are family-friendly. Children must be accompanied by adults, and the minimum age for the walkway is typically 5 years." },
           ].map((item, i) => (
             <details key={i} className="bg-background rounded-xl p-6 group cursor-pointer">

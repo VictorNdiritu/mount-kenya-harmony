@@ -21,7 +21,7 @@ const rooms = [
   {
     name: "Deluxe Room",
     image: dlxImage,
-    description: "A spacious room with elegant furnishings, modern amenities, and garden or mountain views. Each Deluxe Room features a comfortable king-size bed, en-suite bathroom with hot shower, complimentary toiletries, flat-screen TV, and a work desk — perfect for both leisure and business travellers visiting the Mount Kenya region.",
+    description: "A spacious room with elegant furnishings, modern amenities, and garden or mountain views. Each Deluxe Room features a comfortable king-size bed, en-suite bathroom with hot shower, complimentary toiletries, flat-screen TV, and a work desk - perfect for both leisure and business travellers visiting the Mount Kenya region.",
     amenities: ["Free Wi-Fi", "Room Service", "Mountain View", "En-suite Bathroom"],
     tiers: [
       { label: "Bed & Breakfast", resSgl: "10,500", resDbl: "11,500", nrSgl: "$100", nrDbl: "$120" },
@@ -32,7 +32,7 @@ const rooms = [
   {
     name: "Superior Deluxe",
     image: supImage,
-    description: "Upgraded luxury with premium bedding, a sitting area, and panoramic views of Mount Kenya. The Superior Deluxe room offers an enhanced experience with a larger floor plan, premium bathroom amenities, mini bar, and a private balcony or terrace overlooking our landscaped gardens — ideal for guests seeking extra comfort.",
+    description: "Upgraded luxury with premium bedding, a sitting area, and panoramic views of Mount Kenya. The Superior Deluxe room offers an enhanced experience with a larger floor plan, premium bathroom amenities, mini bar, and a private balcony or terrace overlooking our landscaped gardens - ideal for guests seeking extra comfort.",
     amenities: ["Free Wi-Fi", "Mini Bar", "Panoramic View", "Private Balcony"],
     tiers: [
       { label: "Bed & Breakfast", resSgl: "11,500", resDbl: "13,500", nrSgl: "$120", nrDbl: "$140" },
@@ -79,7 +79,7 @@ const Rooms = () => (
   <>
     <SEOHead
       title="Rooms & Rates"
-      description="Browse room types and 2026 rates at The Warwick Hotel Nanyuki — Deluxe, Superior Deluxe, Family, and Twin rooms with Bed & Breakfast, Half Board, and Full Board options. Book your Mount Kenya accommodation today."
+      description="Browse room types and 2026 rates at The Warwick Hotel Nanyuki - Deluxe, Superior Deluxe, Family, and Twin rooms with Bed & Breakfast, Half Board, and Full Board options. Book your Mount Kenya accommodation today."
       canonical="/rooms"
       jsonLd={roomsFaqJsonLd}
     />

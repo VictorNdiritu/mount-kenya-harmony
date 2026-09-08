@@ -7,10 +7,10 @@ import heroImg from "@/assets/hero-image-1.jpg";
 
 const blogPosts = [
   { title: "Top 5 Things to Do in Nanyuki", slug: "top-5-things-nanyuki", date: "Jan 15, 2026", excerpt: "Discover the hidden gems of Nanyuki town at the foothills of Mount Kenya. From exploring local markets to visiting the equator line, Nanyuki offers a rich blend of culture, nature, and adventure." },
-  { title: "A Guide to Climbing Mount Kenya", slug: "climbing-mount-kenya", date: "Jan 8, 2026", excerpt: "Everything you need to know before embarking on your Mount Kenya adventure — routes, gear, preparation, altitude tips, and the best time of year to summit." },
+  { title: "A Guide to Climbing Mount Kenya", slug: "climbing-mount-kenya", date: "Jan 8, 2026", excerpt: "Everything you need to know before embarking on your Mount Kenya adventure - routes, gear, preparation, altitude tips, and the best time of year to summit." },
   { title: "Wildlife Safari at Ol Pejeta", slug: "ol-pejeta-safari", date: "Dec 20, 2025", excerpt: "Why Ol Pejeta Conservancy should be on every traveller's bucket list. Home to the Big Five and the last two northern white rhinos on Earth." },
   { title: "Best Dining Experiences in Laikipia", slug: "best-dining-laikipia", date: "Dec 10, 2025", excerpt: "From farm-to-table cuisine to traditional Kenyan dishes, explore the culinary landscape of the Laikipia region and our dining options at The Warwick." },
-  { title: "Planning a Corporate Retreat in Nanyuki", slug: "corporate-retreat-nanyuki", date: "Nov 28, 2025", excerpt: "How The Warwick Hotel can host your perfect team-building event — conference facilities, outdoor activities, and accommodation packages in the Mount Kenya region." },
+  { title: "Planning a Corporate Retreat in Nanyuki", slug: "corporate-retreat-nanyuki", date: "Nov 28, 2025", excerpt: "How The Warwick Hotel can host your perfect team-building event - conference facilities, outdoor activities, and accommodation packages in the Mount Kenya region." },
   { title: "Trout Fishing in Nanyuki Streams", slug: "trout-fishing-nanyuki", date: "Nov 15, 2025", excerpt: "A guide to fly-fishing for rainbow and brown trout in the crystal-clear highland streams of the Nanyuki and Burguret rivers." },
 ];
 

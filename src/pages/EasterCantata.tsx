@@ -51,7 +51,7 @@ const EasterCantata = () => {
       <PageHero
         image={heroImg}
         title="Easter Cantata Night"
-        subtitle="Where faith meets jazz — an unforgettable evening of sacred music"
+        subtitle="Where faith meets jazz - an unforgettable evening of sacred music"
       />
 
       {/* Collaboration Logos */}
@@ -153,7 +153,7 @@ const EasterCantata = () => {
             </motion.div>
 
             <motion.p variants={fadeUp} custom={1} className="text-background/70 mb-6">
-              Limited tickets available — this exclusive event is expected to sell out quickly.
+              Limited tickets available - this exclusive event is expected to sell out quickly.
             </motion.p>
 
             <motion.div variants={fadeUp} custom={2} className="inline-flex items-center gap-2 bg-primary text-primary-foreground rounded-full px-8 py-4 text-xl font-bold mb-2">

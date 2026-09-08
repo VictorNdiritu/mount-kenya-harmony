@@ -12,26 +12,26 @@ const blogContent: Record<string, {
   "top-5-things-nanyuki": {
     title: "Top 5 Things to Do in Nanyuki",
     date: "January 15, 2026",
-    description: "Discover the hidden gems of Nanyuki town at the foothills of Mount Kenya — from local markets to the equator line crossing.",
+    description: "Discover the hidden gems of Nanyuki town at the foothills of Mount Kenya - from local markets to the equator line crossing.",
     sections: [
       {
         heading: "1. Visit the Equator Line",
         content: [
-          "Nanyuki is one of the few towns in the world where you can literally stand on the equator. The famous Nanyuki Equator sign on the A2 highway is a must-visit photo stop. Local demonstrators show the Coriolis effect — watch water swirl in different directions on each side of the line.",
+          "Nanyuki is one of the few towns in the world where you can literally stand on the equator. The famous Nanyuki Equator sign on the A2 highway is a must-visit photo stop. Local demonstrators show the Coriolis effect - watch water swirl in different directions on each side of the line.",
           "Several equator markers are dotted around town, but the most popular one includes small shops selling handmade crafts and souvenirs. It's a great first stop when you arrive in Nanyuki."
         ]
       },
       {
         heading: "2. Explore Nanyuki Town Market",
         content: [
-          "The bustling Nanyuki town market is the heartbeat of local life. Here you'll find fresh produce from the surrounding farms — avocados, mangoes, passion fruit, and vegetables grown in the fertile volcanic soil of Mount Kenya's lower slopes.",
+          "The bustling Nanyuki town market is the heartbeat of local life. Here you'll find fresh produce from the surrounding farms - avocados, mangoes, passion fruit, and vegetables grown in the fertile volcanic soil of Mount Kenya's lower slopes.",
           "The market is also a wonderful place to buy local honey, macadamia nuts, and handwoven baskets. Arrive early in the morning for the best selection and a genuine glimpse into rural Kenyan commerce."
         ]
       },
       {
         heading: "3. Day Trip to Ol Pejeta Conservancy",
         content: [
-          "Just 25 km from Nanyuki, Ol Pejeta Conservancy is home to the Big Five and the last two northern white rhinos on Earth. A full-day game drive here is an unforgettable experience — you'll see lions, elephants, buffalo, and hundreds of bird species.",
+          "Just 25 km from Nanyuki, Ol Pejeta Conservancy is home to the Big Five and the last two northern white rhinos on Earth. A full-day game drive here is an unforgettable experience - you'll see lions, elephants, buffalo, and hundreds of bird species.",
           "Don't miss the Sweetwaters Chimpanzee Sanctuary, the only place in Kenya where you can see chimpanzees. Night game drives are also available for a chance to spot nocturnal wildlife."
         ]
       },
@@ -54,12 +54,12 @@ const blogContent: Record<string, {
   "climbing-mount-kenya": {
     title: "A Guide to Climbing Mount Kenya",
     date: "January 8, 2026",
-    description: "Everything you need to know about climbing Mount Kenya — routes, preparation, gear, and the best time to summit Africa's second-highest peak.",
+    description: "Everything you need to know about climbing Mount Kenya - routes, preparation, gear, and the best time to summit Africa's second-highest peak.",
     sections: [
       {
         heading: "Why Climb Mount Kenya?",
         content: [
-          "Mount Kenya is Africa's second-highest mountain at 5,199 metres and a UNESCO World Heritage Site. Unlike Kilimanjaro, Mount Kenya offers a more rugged and varied climbing experience with diverse ecosystems — from dense bamboo forests to alpine moorlands and glacial peaks.",
+          "Mount Kenya is Africa's second-highest mountain at 5,199 metres and a UNESCO World Heritage Site. Unlike Kilimanjaro, Mount Kenya offers a more rugged and varied climbing experience with diverse ecosystems - from dense bamboo forests to alpine moorlands and glacial peaks.",
           "The most popular trekking summit is Point Lenana at 4,985 metres, which doesn't require technical climbing equipment and rewards hikers with spectacular sunrise views over the African plains."
         ]
       },
@@ -80,7 +80,7 @@ const blogContent: Record<string, {
       {
         heading: "Best Time to Climb",
         content: [
-          "The dry seasons — January to March and July to October — offer the best conditions for climbing. During these months you'll have clearer skies, less mud on the trails, and better summit views.",
+          "The dry seasons - January to March and July to October - offer the best conditions for climbing. During these months you'll have clearer skies, less mud on the trails, and better summit views.",
           "The long rains (April-June) and short rains (November-December) make trails slippery and cloud cover is heavy. However, the mountain is beautiful year-round and the lower forest trails remain accessible in all seasons."
         ]
       },
@@ -96,19 +96,19 @@ const blogContent: Record<string, {
   "ol-pejeta-safari": {
     title: "Wildlife Safari at Ol Pejeta Conservancy",
     date: "December 20, 2025",
-    description: "Discover why Ol Pejeta Conservancy is one of Kenya's top safari destinations — home to the Big Five and the last northern white rhinos.",
+    description: "Discover why Ol Pejeta Conservancy is one of Kenya's top safari destinations - home to the Big Five and the last northern white rhinos.",
     sections: [
       {
         heading: "About Ol Pejeta Conservancy",
         content: [
-          "Ol Pejeta Conservancy spans 90,000 acres of pristine savannah between the foothills of Mount Kenya and the Aberdare Mountain Range. It's the largest black rhino sanctuary in East Africa and home to the last two northern white rhinos in the world — Najin and Fatu.",
+          "Ol Pejeta Conservancy spans 90,000 acres of pristine savannah between the foothills of Mount Kenya and the Aberdare Mountain Range. It's the largest black rhino sanctuary in East Africa and home to the last two northern white rhinos in the world - Najin and Fatu.",
           "Located just 25 km from The Warwick Hotel Nanyuki, Ol Pejeta is one of the most accessible and rewarding safari destinations in Kenya. Unlike the Masai Mara, it offers excellent wildlife viewing without the crowds."
         ]
       },
       {
         heading: "The Big Five and Beyond",
         content: [
-          "Ol Pejeta is home to all of the Big Five — lion, leopard, elephant, buffalo, and rhino. The conservancy's relatively compact size means you have excellent chances of spotting them all in a single day's game drive.",
+          "Ol Pejeta is home to all of the Big Five - lion, leopard, elephant, buffalo, and rhino. The conservancy's relatively compact size means you have excellent chances of spotting them all in a single day's game drive.",
           "Beyond the Big Five, look out for cheetah, hyena, zebra, giraffe, waterbuck, and over 500 bird species. The open grasslands and scattered acacia trees provide a classic East African safari landscape."
         ]
       },
@@ -122,7 +122,7 @@ const blogContent: Record<string, {
       {
         heading: "Night Game Drives",
         content: [
-          "One of Ol Pejeta's unique offerings is guided night game drives. After sunset, the savannah transforms — this is when you might spot elusive leopards, aardvarks, bush babies, and other nocturnal creatures rarely seen during the day.",
+          "One of Ol Pejeta's unique offerings is guided night game drives. After sunset, the savannah transforms - this is when you might spot elusive leopards, aardvarks, bush babies, and other nocturnal creatures rarely seen during the day.",
           "Night drives must be booked in advance and are conducted by experienced KWS-certified guides with spotlights. It's an unforgettable experience that most Kenyan parks don't offer."
         ]
       },
@@ -157,22 +157,22 @@ const blogContent: Record<string, {
       {
         heading: "Traditional Kenyan Cuisine",
         content: [
-          "No visit to Nanyuki is complete without trying authentic Kenyan dishes. Ugali (maize meal) served with sukuma wiki (collard greens) and nyama choma is a staple. Pilau — a fragrant spiced rice dish — and chapati are local favourites.",
-          "For the adventurous eater, try mutura (Kenyan sausage), githeri (a hearty bean and maize stew), or irio — a comforting mash of potatoes, peas, and corn from the Kikuyu tradition."
+          "No visit to Nanyuki is complete without trying authentic Kenyan dishes. Ugali (maize meal) served with sukuma wiki (collard greens) and nyama choma is a staple. Pilau - a fragrant spiced rice dish - and chapati are local favourites.",
+          "For the adventurous eater, try mutura (Kenyan sausage), githeri (a hearty bean and maize stew), or irio - a comforting mash of potatoes, peas, and corn from the Kikuyu tradition."
         ]
       },
       {
         heading: "Coffee and Tea Culture",
         content: [
           "Kenya produces some of the world's finest coffee, and the highland region around Mount Kenya is prime growing territory. Several estates near Nanyuki offer tours and tastings where you can learn about the journey from cherry to cup.",
-          "Kenyan chai — sweet, milky tea infused with ginger and spices — is a cultural institution. You'll find it everywhere, from roadside kiosks to hotel lounges. It's the perfect warm drink after a day of highland adventures."
+          "Kenyan chai - sweet, milky tea infused with ginger and spices - is a cultural institution. You'll find it everywhere, from roadside kiosks to hotel lounges. It's the perfect warm drink after a day of highland adventures."
         ]
       },
       {
         heading: "Where to Eat Around Nanyuki",
         content: [
           "Beyond The Warwick, Nanyuki offers several dining gems. The town has a growing food scene with restaurants serving everything from wood-fired pizza to Ethiopian cuisine and classic Kenyan nyama choma joints.",
-          "For a special occasion, some of the luxury lodges and conservancies in Laikipia offer bush dining experiences under the stars — a truly magical way to end a safari day."
+          "For a special occasion, some of the luxury lodges and conservancies in Laikipia offer bush dining experiences under the stars - a truly magical way to end a safari day."
         ]
       }
     ]
@@ -180,12 +180,12 @@ const blogContent: Record<string, {
   "corporate-retreat-nanyuki": {
     title: "Planning a Corporate Retreat in Nanyuki",
     date: "November 28, 2025",
-    description: "How The Warwick Hotel can host your perfect corporate retreat — conference facilities, team-building, and accommodation packages.",
+    description: "How The Warwick Hotel can host your perfect corporate retreat - conference facilities, team-building, and accommodation packages.",
     sections: [
       {
         heading: "Why Nanyuki for Your Corporate Retreat?",
         content: [
-          "The best corporate retreats take teams out of their usual environment and into a setting that inspires fresh thinking. Nanyuki, at the foothills of Mount Kenya, offers exactly that — clean mountain air, stunning natural scenery, and a peaceful atmosphere that's world away from the office.",
+          "The best corporate retreats take teams out of their usual environment and into a setting that inspires fresh thinking. Nanyuki, at the foothills of Mount Kenya, offers exactly that - clean mountain air, stunning natural scenery, and a peaceful atmosphere that's world away from the office.",
           "Despite its tranquil setting, Nanyuki is well-connected. It's a 3-hour drive from Nairobi or a short flight to Nanyuki Airstrip. The Warwick Hotel is centrally located in town with easy access to activities and amenities."
         ]
       },
@@ -193,13 +193,13 @@ const blogContent: Record<string, {
         heading: "Our Conference Facilities",
         content: [
           "The Warwick Hotel's conference rooms are fully equipped with projectors, PA systems, high-speed Wi-Fi, and flexible furniture layouts. Whether you need a boardroom setup for 20 or a theatre arrangement for 100+, we can accommodate your needs.",
-          "Our dedicated events team works with you to plan every detail — from AV requirements and room configuration to meal schedules and activity breaks. Full-day packages include morning tea, lunch, and afternoon tea."
+          "Our dedicated events team works with you to plan every detail - from AV requirements and room configuration to meal schedules and activity breaks. Full-day packages include morning tea, lunch, and afternoon tea."
         ]
       },
       {
         heading: "Team-Building Activities",
         content: [
-          "Nanyuki offers incredible team-building opportunities. Organize a group hike on Mount Kenya's lower slopes, a guided safari at Ol Pejeta Conservancy, or a thrilling walk across the Ngare Ndare Forest canopy walkway — suspended 50 metres above the forest floor.",
+          "Nanyuki offers incredible team-building opportunities. Organize a group hike on Mount Kenya's lower slopes, a guided safari at Ol Pejeta Conservancy, or a thrilling walk across the Ngare Ndare Forest canopy walkway - suspended 50 metres above the forest floor.",
           "For something more relaxed, arrange a poolside barbecue, a cooking class featuring Kenyan cuisine, or a guided bird-watching walk in the hotel gardens. These shared experiences build stronger teams."
         ]
       },
@@ -207,7 +207,7 @@ const blogContent: Record<string, {
         heading: "Accommodation Packages",
         content: [
           "We offer special corporate rates for group bookings across our Deluxe, Superior Deluxe, Family, and Twin rooms. All rooms feature modern amenities, free Wi-Fi, and comfortable bedding.",
-          "Our Full Board package is ideal for retreats — it includes breakfast, lunch, and dinner so your team can focus on the programme without worrying about logistics. We also cater for dietary requirements and special requests."
+          "Our Full Board package is ideal for retreats - it includes breakfast, lunch, and dinner so your team can focus on the programme without worrying about logistics. We also cater for dietary requirements and special requests."
         ]
       },
       {
@@ -235,7 +235,7 @@ const blogContent: Record<string, {
         heading: "Best Fishing Spots",
         content: [
           "The Nanyuki River offers excellent fishing from the town upstream towards the mountain. Several private farms along the river offer day fishing permits with well-maintained riverbanks and good access.",
-          "The Burguret River on the western slopes of Mount Kenya is another favourite — its remote stretches offer solitude and excellent catches. The Mount Kenya Fishing Club and several private estates welcome visiting anglers."
+          "The Burguret River on the western slopes of Mount Kenya is another favourite - its remote stretches offer solitude and excellent catches. The Mount Kenya Fishing Club and several private estates welcome visiting anglers."
         ]
       },
       {
@@ -256,7 +256,7 @@ const blogContent: Record<string, {
         heading: "Catch and Release",
         content: [
           "Most fishing spots around Nanyuki practice catch-and-release to protect trout populations and ensure sustainable fishing for future generations. Barbless hooks are encouraged, and guides will show you proper catch-and-release techniques.",
-          "It's a rewarding and meditative activity — standing in a cold mountain stream with stunning views of Mount Kenya, listening to birdsong, and waiting for that perfect strike. After a day on the river, return to The Warwick for a warm meal and a comfortable night's rest."
+          "It's a rewarding and meditative activity - standing in a cold mountain stream with stunning views of Mount Kenya, listening to birdsong, and waiting for that perfect strike. After a day on the river, return to The Warwick for a warm meal and a comfortable night's rest."
         ]
       }
     ]

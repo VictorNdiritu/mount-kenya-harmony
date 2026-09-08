@@ -46,7 +46,7 @@ const Amenities = () => (
   <>
     <SEOHead
       title="Hotel Amenities"
-      description="Explore the amenities at The Warwick Hotel Nanyuki — swimming pool, landscaped gardens, on-site restaurant, bar and lounge, rooftop dining, laundry service, secure parking, and 24/7 security."
+      description="Explore the amenities at The Warwick Hotel Nanyuki - swimming pool, landscaped gardens, on-site restaurant, bar and lounge, rooftop dining, laundry service, secure parking, and 24/7 security."
       canonical="/amenities"
     />
     <PageHero image={heroImg} title="Hotel Amenities" subtitle="Comfort in every detail" />
@@ -148,7 +148,7 @@ const Amenities = () => (
         </motion.h2>
         <div className="space-y-4">
           {[
-            { q: "Is the swimming pool open to non-guests?", a: "The pool is primarily for hotel guests. Day-use passes may be available on request — please contact our front desk for availability and pricing." },
+            { q: "Is the swimming pool open to non-guests?", a: "The pool is primarily for hotel guests. Day-use passes may be available on request - please contact our front desk for availability and pricing." },
             { q: "What dining options are available?", a: "Our ground floor restaurant serves breakfast, lunch, and dinner with a mix of local Kenyan and international cuisine. We also have a bar and lounge and a rooftop dining area with panoramic views." },
             { q: "Is Wi-Fi available throughout the hotel?", a: "Yes, complimentary high-speed Wi-Fi is available in all rooms, public areas, and conference spaces." },
             { q: "Does the hotel offer airport transfers?", a: "Yes, we can arrange transfers from Nanyuki Airstrip and Nairobi. Please contact us in advance to arrange your transport." },

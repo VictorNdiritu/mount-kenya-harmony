@@ -67,7 +67,7 @@ const Index = () => {
       <section className="relative h-screen min-h-[700px] flex items-center overflow-hidden">
         <img
           src={heroImage}
-          alt="The Warwick Hotel Nanyuki — boutique hotel with Mount Kenya views"
+          alt="The Warwick Hotel Nanyuki - boutique hotel with Mount Kenya views"
           loading="eager"
           fetchPriority="high"
           className="absolute inset-0 w-full h-full object-cover"
@@ -98,7 +98,7 @@ const Index = () => {
               </h1>
 
               <p className="text-lg md:text-xl leading-relaxed mb-10 max-w-lg text-white/90 drop-shadow-md">
-                An independent boutique hotel at the foothills of Mount Kenya — your gateway to adventure and serenity.
+                An independent boutique hotel at the foothills of Mount Kenya - your gateway to adventure and serenity.
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -318,7 +318,7 @@ const Index = () => {
                 Book Your Stay Online
               </motion.h2>
               <motion.p variants={fadeUp} custom={2} className="text-muted-foreground leading-relaxed mb-4">
-                Reserve your room directly through our website. Choose from Deluxe, Superior Deluxe, Family, or Twin rooms with flexible meal plans — Bed & Breakfast, Half Board, or Full Board.
+                Reserve your room directly through our website. Choose from Deluxe, Superior Deluxe, Family, or Twin rooms with flexible meal plans - Bed & Breakfast, Half Board, or Full Board.
               </motion.p>
               <motion.p variants={fadeUp} custom={3} className="text-muted-foreground leading-relaxed mb-6">
                 Special rates available for residents and non-residents. Our team will confirm your booking and assist with any special requests.
