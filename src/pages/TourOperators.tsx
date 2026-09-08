@@ -215,11 +215,11 @@ const TourOperators = () => (
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <a
-            href="mailto:sales@thewarwickhotel.co.ke?subject=Tour%20Operator%20Rate%20Enquiry%20 - %202026%20STO"
+            href="mailto:info@thewarwickhotel.co.ke?subject=Tour%20Operator%20Rate%20Enquiry%202026%20STO"
             onClick={() => track("generate_lead", "Email sales")}
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:bg-aqua-dark transition-all hover:gap-3"
           >
-            <Mail size={16} /> sales@thewarwickhotel.co.ke
+            <Mail size={16} /> info@thewarwickhotel.co.ke
           </a>
           <a
             href="https://wa.me/254799388888?text=Hello%20Warwick%20Hotel%2C%20I%27m%20a%20tour%20operator%20interested%20in%20your%202026%20STO%20rates."
