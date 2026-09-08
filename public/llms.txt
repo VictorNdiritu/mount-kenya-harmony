@@ -12,6 +12,7 @@ The Warwick Hotel Nanyuki is a 4-star independent boutique hotel located in Nany
 - [Amenities](/amenities): Hotel facilities including the restaurant, swimming pool, bar, gardens, and other guest services.
 - [Activities](/activities): Safari excursions, nature walks, Mount Kenya experiences, and local attractions available to guests.
 - [Blog](/blog): Travel guides, hotel news, and stories from Nanyuki and the Mount Kenya region.
+- [Tour Operators](/tour-operators): Trade partner page with 2026 net STO rates (resident and non-resident), conference and team building rates, children's policy, and downloadable rate card PDF.
 - [Contact](/contact): Contact information, location details, WhatsApp direct messaging, and feedback form for guest inquiries.
 - [Booking](/booking): Reservation information, booking process, and pre-check-in form for arriving guests.
 - [Easter Cantata](/easter-cantata): Annual Easter celebration event featuring performances and festivities at the hotel.

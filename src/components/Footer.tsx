@@ -30,6 +30,7 @@ const Footer = () => (
               { label: "Amenities", path: "/amenities" },
               { label: "Activities", path: "/activities" },
               { label: "Blog", path: "/blog" },
+              { label: "Tour Operators", path: "/tour-operators" },
               { label: "Book Online", path: "/booking" },
               { label: "Contact", path: "/contact" },
             ].map((l) => (
