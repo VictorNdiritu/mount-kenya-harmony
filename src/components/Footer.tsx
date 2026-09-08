@@ -1,6 +1,65 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowRight, Loader2, Check } from "lucide-react";
+import { z } from "zod";
+import { toast } from "sonner";
 import logo from "@/assets/logo.webp";
+
+const emailSchema = z.string().trim().email({ message: "Please enter a valid email address" }).max(255);
+
+const NewsletterForm = () => {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "done">("idle");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const parsed = emailSchema.safeParse(email);
+    if (!parsed.success) {
+      toast.error(parsed.error.issues[0].message);
+      return;
+    }
+    setStatus("loading");
+    try {
+      const res = await fetch("https://formspree.io/f/mojbegdn", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({ email: parsed.data, _subject: "Newsletter subscription", form: "Newsletter" }),
+      });
+      if (!res.ok) throw new Error("Request failed");
+      setStatus("done");
+      setEmail("");
+      toast.success("You're subscribed. Thank you!");
+    } catch {
+      setStatus("idle");
+      toast.error("Something went wrong. Please try again or email info@thewarwickhotel.co.ke");
+    }
+  };
+
+  return (
+    <form className="flex" onSubmit={handleSubmit}>
+      <label htmlFor="newsletter-email" className="sr-only">Email address</label>
+      <input
+        id="newsletter-email"
+        type="email"
+        name="email"
+        required
+        maxLength={255}
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        placeholder="Your email"
+        className="flex-1 px-4 py-3 text-sm rounded-l-full bg-secondary border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary"
+      />
+      <button
+        type="submit"
+        disabled={status === "loading"}
+        className="px-5 py-3 bg-primary text-primary-foreground text-sm font-medium rounded-r-full hover:bg-aqua-dark transition-colors disabled:opacity-70"
+        aria-label="Subscribe to newsletter"
+      >
+        {status === "loading" ? <Loader2 size={16} className="animate-spin" /> : status === "done" ? <Check size={16} /> : <ArrowRight size={16} />}
+      </button>
+    </form>
+  );
+};
 
 const Footer = () => (
   <footer className="bg-background text-foreground border-t border-border">
