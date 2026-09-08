@@ -1,6 +1,7 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Download, Mail, Phone, MessageCircle, Handshake, BedDouble, Users } from "lucide-react";
+import { ArrowRight, Download, Loader2, Mail, Phone, MessageCircle, Handshake, BedDouble, Users } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import SEOHead from "@/components/SEOHead";
 import heroImg from "@/assets/homepage-photos/IMG-20250408-WA0018.jpg";
@@ -22,6 +23,29 @@ const track = (action: string, label: string) => {
 
 const RATE_PDF_URL =
   "https://cdn.jsdelivr.net/gh/VictorNdiritu/mount-kenya-harmony@main/src/assets/The%20Warwick%20Hotel%20STO%20Rates%202026.pdf";
+
+const downloadPdf = async (setLoading: (v: boolean) => void) => {
+  track("file_download", "STO Rates 2026 PDF");
+  setLoading(true);
+  try {
+    const res = await fetch(RATE_PDF_URL);
+    if (!res.ok) throw new Error("Download failed");
+    const blob = await res.blob();
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "The_Warwick_Hotel_STO_Rates_2026.pdf";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  } catch {
+    // Fallback: open in new tab if blob fetch fails
+    window.open(RATE_PDF_URL, "_blank", "noopener,noreferrer");
+  } finally {
+    setLoading(false);
+  }
+};
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -69,6 +93,21 @@ const jsonLd = {
   description:
     "Confidential 2026 Standard Tour Operator (STO) rates for The Warwick Hotel Nanyuki, including resident and non-resident room rates, conference rates, and children's policy.",
   url: "https://thewarwickhotel.co.ke/tour-operators",
+};
+
+const DownloadButton = () => {
+  const [loading, setLoading] = useState(false);
+  return (
+    <button
+      type="button"
+      disabled={loading}
+      onClick={() => downloadPdf(setLoading)}
+      className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-primary text-primary-foreground font-body text-sm font-medium tracking-wide hover:bg-aqua-dark transition-all hover:gap-3 shrink-0 disabled:opacity-70 disabled:cursor-not-allowed"
+    >
+      {loading ? <Loader2 size={16} className="animate-spin" /> : <Download size={16} />}
+      {loading ? "Downloading…" : "Download STO Rates (PDF)"}
+    </button>
+  );
 };
 
 const TourOperators = () => (
@@ -150,15 +189,7 @@ const TourOperators = () => (
               </p>
             </div>
           </div>
-          <a
-            href={RATE_PDF_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => track("file_download", "STO Rates 2026 PDF")}
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-primary text-primary-foreground font-body text-sm font-medium tracking-wide hover:bg-aqua-dark transition-all hover:gap-3 shrink-0"
-          >
-            <Download size={16} /> Download STO Rates (PDF)
-          </a>
+          <DownloadButton />
         </div>
 
         <div className="overflow-x-auto rounded-2xl border border-border bg-card">
