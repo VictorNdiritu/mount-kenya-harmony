@@ -21,7 +21,7 @@ const track = (action: string, label: string) => {
 };
 
 const RATE_PDF_URL =
-  "https://raw.githubusercontent.com/VictorNdiritu/mount-kenya-harmony/main/src/assets/The%20Warwick%20Hotel%20STO%20Rates%202026.pdf";
+  "https://cdn.jsdelivr.net/gh/VictorNdiritu/mount-kenya-harmony@main/src/assets/The%20Warwick%20Hotel%20STO%20Rates%202026.pdf";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
