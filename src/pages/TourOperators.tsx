@@ -135,6 +135,13 @@ const TourOperators = () => (
             <p className="text-primary font-body text-sm font-semibold tracking-[0.2em] uppercase mb-3">Rate Card</p>
             <h2 className="font-display text-4xl font-bold text-foreground">2026 STO Rates</h2>
             <p className="text-muted-foreground mt-3">Per room, per night. Inclusive of all statutory taxes.</p>
+            <p className="text-foreground/80 text-sm mt-4 rounded-xl border border-primary/40 bg-primary/10 px-5 py-4 max-w-2xl">
+              <strong className="font-semibold">Please note:</strong> these are contracted tour operator (STO) rates for
+              travel trade partners only. They are not the rates for individual guests booking directly. If you are
+              planning a personal stay, please see our{" "}
+              <Link to="/rooms" className="text-primary underline">rooms and rates</Link> or{" "}
+              <Link to="/booking" className="text-primary underline">book directly</Link> with us.
+            </p>
           </div>
           <a
             href={RATE_PDF_URL}
