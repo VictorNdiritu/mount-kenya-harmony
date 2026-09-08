@@ -23,15 +23,21 @@ const NewsletterForm = () => {
       const res = await fetch("https://formspree.io/f/mojbegdn", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({ email: parsed.data, _subject: "Newsletter subscription", form: "Newsletter" }),
+        body: JSON.stringify({ email: parsed.data, _subject: "Newsletter subscription – Mount Kenya Harmony", form: "Newsletter" }),
       });
-      if (!res.ok) throw new Error("Request failed");
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        // Surface Formspree error if available
+        const msg = (data as { error?: string }).error ?? "Request failed";
+        throw new Error(msg);
+      }
       setStatus("done");
       setEmail("");
       toast.success("You're subscribed. Thank you!");
-    } catch {
+    } catch (err) {
       setStatus("idle");
-      toast.error("Something went wrong. Please try again or email info@thewarwickhotel.co.ke");
+      console.error("Newsletter error:", err);
+      toast.error("Something went wrong. Please email info@thewarwickhotel.co.ke to subscribe.");
     }
   };
 
@@ -51,7 +57,7 @@ const NewsletterForm = () => {
       />
       <button
         type="submit"
-        disabled={status === "loading"}
+        disabled={status === "loading" || status === "done"}
         className="px-5 py-3 bg-primary text-primary-foreground text-sm font-medium rounded-r-full hover:bg-aqua-dark transition-colors disabled:opacity-70"
         aria-label="Subscribe to newsletter"
       >

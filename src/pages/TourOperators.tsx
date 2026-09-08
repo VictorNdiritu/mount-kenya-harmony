@@ -4,7 +4,7 @@ import { ArrowRight, Download, Mail, Phone, MessageCircle, Handshake, BedDouble,
 import PageHero from "@/components/PageHero";
 import SEOHead from "@/components/SEOHead";
 import heroImg from "@/assets/homepage-photos/IMG-20250408-WA0018.jpg";
-import stoPdf from "@/assets/sto-rates-2026.pdf.asset.json";
+// PDF fetched directly from GitHub repository
 
 declare global {
   interface Window {
@@ -20,7 +20,8 @@ const track = (action: string, label: string) => {
   });
 };
 
-const RATE_PDF_URL = `${stoPdf.url}?utm_source=website&utm_medium=tour_operators_page&utm_campaign=sto_rates_2026`;
+const RATE_PDF_URL =
+  "https://raw.githubusercontent.com/VictorNdiritu/mount-kenya-harmony/main/src/assets/The%20Warwick%20Hotel%20STO%20Rates%202026.pdf";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -47,12 +48,12 @@ const rates: Row[] = [
   { room: "Superior Deluxe Room", plan: "Bed & Breakfast", resSingle: "10,500", resDouble: "12,500", nonSingle: "110", nonDouble: "130" },
   { room: "Superior Deluxe Room", plan: "Half Board", resSingle: "12,000", resDouble: "15,500", nonSingle: "130", nonDouble: "150" },
   { room: "Superior Deluxe Room", plan: "Full Board", resSingle: "13,500", resDouble: "16,500", nonSingle: "150", nonDouble: "170" },
-  { room: "Family Room", plan: "Bed & Breakfast", resSingle: "15,500", resDouble: " - ", nonSingle: " - ", nonDouble: "170" },
-  { room: "Family Room", plan: "Half Board", resSingle: "21,500", resDouble: " - ", nonSingle: " - ", nonDouble: "200" },
-  { room: "Family Room", plan: "Full Board", resSingle: "27,500", resDouble: " - ", nonSingle: " - ", nonDouble: "260" },
-  { room: "Deluxe Twin Room", plan: "Bed & Breakfast", resSingle: " - ", resDouble: "11,500", nonSingle: " - ", nonDouble: "120" },
-  { room: "Deluxe Twin Room", plan: "Half Board", resSingle: " - ", resDouble: "14,000", nonSingle: " - ", nonDouble: "140" },
-  { room: "Deluxe Twin Room", plan: "Full Board", resSingle: " - ", resDouble: "16,000", nonSingle: " - ", nonDouble: "160" },
+  { room: "Family Room", plan: "Bed & Breakfast", resSingle: "15,500", resDouble: "N/A", nonSingle: "N/A", nonDouble: "170" },
+  { room: "Family Room", plan: "Half Board", resSingle: "21,500", resDouble: "N/A", nonSingle: "N/A", nonDouble: "200" },
+  { room: "Family Room", plan: "Full Board", resSingle: "27,500", resDouble: "N/A", nonSingle: "N/A", nonDouble: "260" },
+  { room: "Deluxe Twin Room", plan: "Bed & Breakfast", resSingle: "N/A", resDouble: "11,500", nonSingle: "N/A", nonDouble: "120" },
+  { room: "Deluxe Twin Room", plan: "Half Board", resSingle: "N/A", resDouble: "14,000", nonSingle: "N/A", nonDouble: "140" },
+  { room: "Deluxe Twin Room", plan: "Full Board", resSingle: "N/A", resDouble: "16,000", nonSingle: "N/A", nonDouble: "160" },
 ];
 
 const benefits = [
@@ -135,13 +136,19 @@ const TourOperators = () => (
             <p className="text-primary font-body text-sm font-semibold tracking-[0.2em] uppercase mb-3">Rate Card</p>
             <h2 className="font-display text-4xl font-bold text-foreground">2026 STO Rates</h2>
             <p className="text-muted-foreground mt-3">Per room, per night. Inclusive of all statutory taxes.</p>
-            <p className="text-foreground/80 text-sm mt-4 rounded-xl border border-primary/40 bg-primary/10 px-5 py-4 max-w-2xl">
-              <strong className="font-semibold">Please note:</strong> these are contracted tour operator (STO) rates for
-              travel trade partners only. They are not the rates for individual guests booking directly. If you are
-              planning a personal stay, please see our{" "}
-              <Link to="/rooms" className="text-primary underline">rooms and rates</Link> or{" "}
-              <Link to="/booking" className="text-primary underline">book directly</Link> with us.
-            </p>
+            <div className="mt-4 max-w-2xl rounded-xl border-2 border-amber-400/60 bg-amber-50/10 px-5 py-4">
+              <p className="text-amber-600 dark:text-amber-400 font-display font-semibold text-sm uppercase tracking-wide mb-1">
+                ⚠ Tour Operator Rates Only
+              </p>
+              <p className="text-foreground/80 text-sm leading-relaxed">
+                These are <strong className="font-semibold">contracted STO (Standard Tour Operator) rates</strong> for
+                registered travel trade partners, DMCs, and tour operators only. They are{" "}
+                <strong className="font-semibold">not public rates</strong> for individual guests booking directly.
+                If you are planning a personal stay, please see our{" "}
+                <Link to="/rooms" className="text-primary underline font-medium">rooms and rates</Link> or{" "}
+                <Link to="/booking" className="text-primary underline font-medium">book directly</Link> with us.
+              </p>
+            </div>
           </div>
           <a
             href={RATE_PDF_URL}
