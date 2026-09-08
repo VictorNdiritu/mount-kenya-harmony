@@ -47,16 +47,16 @@ const rates: Row[] = [
   { room: "Superior Deluxe Room", plan: "Bed & Breakfast", resSingle: "10,500", resDouble: "12,500", nonSingle: "110", nonDouble: "130" },
   { room: "Superior Deluxe Room", plan: "Half Board", resSingle: "12,000", resDouble: "15,500", nonSingle: "130", nonDouble: "150" },
   { room: "Superior Deluxe Room", plan: "Full Board", resSingle: "13,500", resDouble: "16,500", nonSingle: "150", nonDouble: "170" },
-  { room: "Family Room", plan: "Bed & Breakfast", resSingle: "15,500", resDouble: "—", nonSingle: "—", nonDouble: "170" },
-  { room: "Family Room", plan: "Half Board", resSingle: "21,500", resDouble: "—", nonSingle: "—", nonDouble: "200" },
-  { room: "Family Room", plan: "Full Board", resSingle: "27,500", resDouble: "—", nonSingle: "—", nonDouble: "260" },
-  { room: "Deluxe Twin Room", plan: "Bed & Breakfast", resSingle: "—", resDouble: "11,500", nonSingle: "—", nonDouble: "120" },
-  { room: "Deluxe Twin Room", plan: "Half Board", resSingle: "—", resDouble: "14,000", nonSingle: "—", nonDouble: "140" },
-  { room: "Deluxe Twin Room", plan: "Full Board", resSingle: "—", resDouble: "16,000", nonSingle: "—", nonDouble: "160" },
+  { room: "Family Room", plan: "Bed & Breakfast", resSingle: "15,500", resDouble: " - ", nonSingle: " - ", nonDouble: "170" },
+  { room: "Family Room", plan: "Half Board", resSingle: "21,500", resDouble: " - ", nonSingle: " - ", nonDouble: "200" },
+  { room: "Family Room", plan: "Full Board", resSingle: "27,500", resDouble: " - ", nonSingle: " - ", nonDouble: "260" },
+  { room: "Deluxe Twin Room", plan: "Bed & Breakfast", resSingle: " - ", resDouble: "11,500", nonSingle: " - ", nonDouble: "120" },
+  { room: "Deluxe Twin Room", plan: "Half Board", resSingle: " - ", resDouble: "14,000", nonSingle: " - ", nonDouble: "140" },
+  { room: "Deluxe Twin Room", plan: "Full Board", resSingle: " - ", resDouble: "16,000", nonSingle: " - ", nonDouble: "160" },
 ];
 
 const benefits = [
-  { icon: Handshake, title: "Net, Non-Commissionable Rates", desc: "Confidential STO rates published for contracted tour operators, DMCs, and travel agents — inclusive of all statutory taxes." },
+  { icon: Handshake, title: "Net, Non-Commissionable Rates", desc: "Confidential STO rates published for contracted tour operators, DMCs, and travel agents - inclusive of all statutory taxes." },
   { icon: BedDouble, title: "Allocations & Group Blocks", desc: "Room allocations and release periods for series bookings, FIT programmes, and safari circuit stopovers to and from Mount Kenya." },
   { icon: Users, title: "Groups, MICE & Team Building", desc: "Conference and team building day packages from KES 3,000 per delegate, with flexible layouts and full-board group arrangements." },
 ];
@@ -64,7 +64,7 @@ const benefits = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Tour Operator STO Rates 2026 — The Warwick Hotel Nanyuki",
+  name: "Tour Operator STO Rates 2026 - The Warwick Hotel Nanyuki",
   description:
     "Confidential 2026 Standard Tour Operator (STO) rates for The Warwick Hotel Nanyuki, including resident and non-resident room rates, conference rates, and children's policy.",
   url: "https://thewarwickhotel.co.ke/tour-operators",
@@ -74,14 +74,14 @@ const TourOperators = () => (
   <>
     <SEOHead
       title="Tour Operators & Trade Partners"
-      description="Partner with The Warwick Hotel Nanyuki. Download our 2026 STO rates — net, non-commissionable resident and non-resident rates, conference packages, and group allocations at the foothills of Mount Kenya."
+      description="Partner with The Warwick Hotel Nanyuki. Download our 2026 STO rates - net, non-commissionable resident and non-resident rates, conference packages, and group allocations at the foothills of Mount Kenya."
       canonical="/tour-operators"
       jsonLd={jsonLd}
     />
     <PageHero
       image={heroImg}
       title="Tour Operators & Trade Partners"
-      subtitle="Welcome, partners — your Mount Kenya base for FIT, group, and safari circuit programmes"
+      subtitle="Welcome, partners - your Mount Kenya base for FIT, group, and safari circuit programmes"
     />
 
     {/* Welcome */}
@@ -135,6 +135,13 @@ const TourOperators = () => (
             <p className="text-primary font-body text-sm font-semibold tracking-[0.2em] uppercase mb-3">Rate Card</p>
             <h2 className="font-display text-4xl font-bold text-foreground">2026 STO Rates</h2>
             <p className="text-muted-foreground mt-3">Per room, per night. Inclusive of all statutory taxes.</p>
+            <p className="text-foreground/80 text-sm mt-4 rounded-xl border border-primary/40 bg-primary/10 px-5 py-4 max-w-2xl">
+              <strong className="font-semibold">Please note:</strong> these are contracted tour operator (STO) rates for
+              travel trade partners only. They are not the rates for individual guests booking directly. If you are
+              planning a personal stay, please see our{" "}
+              <Link to="/rooms" className="text-primary underline">rooms and rates</Link> or{" "}
+              <Link to="/booking" className="text-primary underline">book directly</Link> with us.
+            </p>
           </div>
           <a
             href={RATE_PDF_URL}
@@ -179,10 +186,10 @@ const TourOperators = () => (
           <div className="rounded-2xl border border-border p-8 bg-card">
             <h3 className="font-display text-xl font-semibold text-foreground mb-4">Conference & Team Building</h3>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              <li className="flex justify-between border-b border-border pb-3"><span>Conference — Full Day</span><span className="text-foreground font-medium">KES 3,500</span></li>
-              <li className="flex justify-between border-b border-border pb-3"><span>Conference — Half Day</span><span className="text-foreground font-medium">KES 3,000</span></li>
-              <li className="flex justify-between border-b border-border pb-3"><span>Team Building — Full Day</span><span className="text-foreground font-medium">KES 3,500</span></li>
-              <li className="flex justify-between"><span>Team Building — Half Day</span><span className="text-foreground font-medium">KES 3,000</span></li>
+              <li className="flex justify-between border-b border-border pb-3"><span>Conference - Full Day</span><span className="text-foreground font-medium">KES 3,500</span></li>
+              <li className="flex justify-between border-b border-border pb-3"><span>Conference - Half Day</span><span className="text-foreground font-medium">KES 3,000</span></li>
+              <li className="flex justify-between border-b border-border pb-3"><span>Team Building - Full Day</span><span className="text-foreground font-medium">KES 3,500</span></li>
+              <li className="flex justify-between"><span>Team Building - Half Day</span><span className="text-foreground font-medium">KES 3,000</span></li>
             </ul>
           </div>
           <div className="rounded-2xl border border-border p-8 bg-card">
@@ -208,11 +215,11 @@ const TourOperators = () => (
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <a
-            href="mailto:sales@thewarwickhotel.co.ke?subject=Tour%20Operator%20Rate%20Enquiry%20—%202026%20STO"
+            href="mailto:info@thewarwickhotel.co.ke?subject=Tour%20Operator%20Rate%20Enquiry%202026%20STO"
             onClick={() => track("generate_lead", "Email sales")}
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:bg-aqua-dark transition-all hover:gap-3"
           >
-            <Mail size={16} /> sales@thewarwickhotel.co.ke
+            <Mail size={16} /> info@thewarwickhotel.co.ke
           </a>
           <a
             href="https://wa.me/254799388888?text=Hello%20Warwick%20Hotel%2C%20I%27m%20a%20tour%20operator%20interested%20in%20your%202026%20STO%20rates."

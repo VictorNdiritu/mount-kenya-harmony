@@ -201,7 +201,7 @@ const Contact = () => {
           <div className="space-y-4">
             {[
               { q: "What are your office hours?", a: "Our front desk is staffed 24/7. For reservations and general inquiries, our office operates from 7:00 AM to 10:00 PM East Africa Time." },
-              { q: "How do I get to the hotel from Nairobi?", a: "The hotel is approximately 200 km from Nairobi, about a 3-hour drive via the Nairobi-Nanyuki highway. You can also fly to Nanyuki Airstrip — we can arrange airport transfers." },
+              { q: "How do I get to the hotel from Nairobi?", a: "The hotel is approximately 200 km from Nairobi, about a 3-hour drive via the Nairobi-Nanyuki highway. You can also fly to Nanyuki Airstrip - we can arrange airport transfers." },
               { q: "Can I make a reservation by phone?", a: "Yes, call us at +254 799 388 888 or email info@thewarwickhotel.co.ke. You can also book online through our booking page." },
             ].map((item, i) => (
               <details key={i} className="bg-secondary rounded-xl p-6 group cursor-pointer">

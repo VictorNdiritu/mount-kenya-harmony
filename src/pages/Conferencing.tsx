@@ -121,7 +121,7 @@ const Conferencing = () => (
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          Rates are per person and inclusive of all statutory taxes. Residential conference packages are also available — <Link to="/contact" className="text-primary hover:underline">contact us</Link> for a custom quote.
+          Rates are per person and inclusive of all statutory taxes. Residential conference packages are also available - <Link to="/contact" className="text-primary hover:underline">contact us</Link> for a custom quote.
         </motion.p>
       </div>
     </section>
