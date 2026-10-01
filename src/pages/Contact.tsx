@@ -19,6 +19,7 @@ const inputClass = "w-full px-5 py-3.5 rounded-xl border border-border bg-backgr
 const Contact = () => {
   const [bookingForm, setBookingForm] = useState({ name: "", email: "", phone: "", dates: "", roomType: "", message: "" });
   const [feedbackForm, setFeedbackForm] = useState({ name: "", email: "", rating: "", comments: "" });
+  const [bookingStatus, setBookingStatus] = useState<"idle" | "loading" | "done" | "error">("idle");
 
   return (
     <>
@@ -91,23 +92,43 @@ const Contact = () => {
               viewport={{ once: true }}
             >
               <motion.h2 variants={fadeUp} custom={0} className="font-display text-3xl font-bold text-foreground mb-8">Reservation Inquiry</motion.h2>
+              {bookingStatus === "done" ? (
+                <div className="rounded-2xl border border-primary/30 bg-primary/10 p-8 text-center">
+                  <h3 className="font-display text-2xl font-semibold text-foreground mb-2">Thank you!</h3>
+                  <p className="text-muted-foreground mb-4">Your inquiry has been sent. Our team will reply within 24 hours.</p>
+                  <button onClick={() => setBookingStatus("idle")} className="text-primary text-sm font-medium hover:underline">Send another inquiry</button>
+                </div>
+              ) : (
               <form
+                action="https://formspree.io/f/mojbegdn"
+                method="POST"
                 className="grid sm:grid-cols-2 gap-4"
-                onSubmit={(e) => {
+                onSubmit={async (e) => {
                   e.preventDefault();
-                  const msg = `Booking Inquiry:\nName: ${bookingForm.name}\nEmail: ${bookingForm.email}\nPhone: ${bookingForm.phone}\nDates: ${bookingForm.dates}\nRoom: ${bookingForm.roomType}\nMessage: ${bookingForm.message}`;
-                  window.open(`https://wa.me/254799388888?text=${encodeURIComponent(msg)}`, "_blank");
+                  setBookingStatus("loading");
+                  try {
+                    const res = await fetch("https://formspree.io/f/mojbegdn", {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json", Accept: "application/json" },
+                      body: JSON.stringify({ ...bookingForm, _subject: "Reservation Inquiry", form: "Reservation Inquiry" }),
+                    });
+                    if (!res.ok) throw new Error("failed");
+                    setBookingForm({ name: "", email: "", phone: "", dates: "", roomType: "", message: "" });
+                    setBookingStatus("done");
+                  } catch {
+                    setBookingStatus("error");
+                  }
                 }}
               >
-                <input type="text" placeholder="Full Name" required className={inputClass}
+                <input name="name" type="text" placeholder="Full Name" required maxLength={100} className={inputClass}
                   value={bookingForm.name} onChange={(e) => setBookingForm({ ...bookingForm, name: e.target.value })} />
-                <input type="email" placeholder="Email Address" required className={inputClass}
+                <input name="email" type="email" placeholder="Email Address" required maxLength={255} className={inputClass}
                   value={bookingForm.email} onChange={(e) => setBookingForm({ ...bookingForm, email: e.target.value })} />
-                <input type="tel" placeholder="Phone Number" className={inputClass}
+                <input name="phone" type="tel" placeholder="Phone Number" maxLength={30} className={inputClass}
                   value={bookingForm.phone} onChange={(e) => setBookingForm({ ...bookingForm, phone: e.target.value })} />
-                <input type="text" placeholder="Preferred Dates" className={inputClass}
+                <input name="dates" type="text" placeholder="Preferred Dates" maxLength={100} className={inputClass}
                   value={bookingForm.dates} onChange={(e) => setBookingForm({ ...bookingForm, dates: e.target.value })} />
-                <select className={inputClass}
+                <select name="roomType" className={inputClass}
                   value={bookingForm.roomType} onChange={(e) => setBookingForm({ ...bookingForm, roomType: e.target.value })}>
                   <option value="">Select Room Type</option>
                   <option>Deluxe Room</option>
@@ -116,14 +137,18 @@ const Contact = () => {
                   <option>Deluxe Twin</option>
                 </select>
                 <div />
-                <textarea placeholder="Additional message..." rows={4}
+                <textarea name="message" placeholder="Additional message..." rows={4} maxLength={2000}
                   className={`sm:col-span-2 resize-none ${inputClass}`}
                   value={bookingForm.message} onChange={(e) => setBookingForm({ ...bookingForm, message: e.target.value })} />
-                <button type="submit"
-                  className="sm:col-span-2 inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground font-body text-sm font-semibold tracking-wide hover:bg-aqua-dark transition-all hover:shadow-lg hover:shadow-primary/20">
-                  <Send size={16} /> Send Inquiry via WhatsApp
+                {bookingStatus === "error" && (
+                  <p className="sm:col-span-2 text-sm text-destructive">Something went wrong. Please try again or email info@thewarwickhotel.co.ke.</p>
+                )}
+                <button type="submit" disabled={bookingStatus === "loading"}
+                  className="sm:col-span-2 inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground font-body text-sm font-semibold tracking-wide hover:bg-aqua-dark transition-all hover:shadow-lg hover:shadow-primary/20 disabled:opacity-70">
+                  <Send size={16} /> {bookingStatus === "loading" ? "Sending..." : "Send Inquiry"}
                 </button>
               </form>
+              )}
             </motion.div>
           </div>
         </div>
